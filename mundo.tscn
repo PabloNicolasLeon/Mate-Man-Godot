@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://bmaa2oewwulpa"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_xwo6f"]
+size = Vector3(32.62268, 1, 32.4395)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6ba58"]
+size = Vector3(32.61389, 1, 32.4386)
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_elgot"]
+albedo_color = Color(0.14509805, 0.12941177, 0.654902, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6ba58"]
+material = SubResource("ORMMaterial3D_elgot")
+size = Vector3(0.48291016, 1, 0.4560547)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lgngo"]
+size = Vector3(0.48394775, 1, 0.45703125)
+
+[node name="Mundo" type="Node3D" unique_id=796373050]
+
+[node name="Suelo" type="StaticBody3D" parent="." unique_id=2136493000]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Suelo" unique_id=873065051]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.81134, 0, -15.719749)
+mesh = SubResource("BoxMesh_xwo6f")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Suelo" unique_id=388238518]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.806946, 0, -15.719299)
+shape = SubResource("BoxShape3D_6ba58")
+debug_color = Color(0.12465874, 0.5939987, 0.7077284, 0.41960785)
+
+[node name="Player" type="CharacterBody3D" parent="." unique_id=1015701351]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0082381, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player" unique_id=567535411]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25854492, 0, -0.27197266)
+mesh = SubResource("BoxMesh_6ba58")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player" unique_id=377961967]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25802612, 0, -0.27148438)
+shape = SubResource("BoxShape3D_lgngo")

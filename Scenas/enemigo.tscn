@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://do2adi51iyq2d"]
+
+[ext_resource type="Script" uid="uid://8pdixcbhrmce" path="res://Scenas/enemigo.gd" id="1_uufq7"]
+[ext_resource type="PackedScene" uid="uid://b85v10h48s62u" path="res://Modelos/godot_logo.glb" id="2_lg7pa"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ue6fl"]
+albedo_color = Color(0.731181, 0, 0.082316704, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_hftd5"]
+radius = 0.3
+height = 1.5
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_667dm"]
+radius = 0.25
+height = 1.5
+
+[node name="Enemigo" type="CharacterBody3D" unique_id=382567089]
+script = ExtResource("1_uufq7")
+
+[node name="Sketchfab_Scene" parent="." unique_id=918423723 instance=ExtResource("2_lg7pa")]
+transform = Transform3D(0.11599637, 0, 0, 0, 0.18282343, 0, 0, 0, 0.099769615, 0.021816328, 0, -0.0014434755)
+
+[node name="Object_4" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode/head top_002_2" parent_id_path=PackedInt32Array(918423723, 1834543100) index="0" unique_id=903689086]
+surface_material_override/0 = SubResource("StandardMaterial3D_ue6fl")
+
+[node name="Object_5" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode/head top_002_2" parent_id_path=PackedInt32Array(918423723, 1834543100) index="1" unique_id=1574986863]
+surface_material_override/0 = SubResource("StandardMaterial3D_ue6fl")
+
+[node name="Object_6" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode/head top_002_2" parent_id_path=PackedInt32Array(918423723, 1834543100) index="2" unique_id=2015033929]
+surface_material_override/0 = SubResource("StandardMaterial3D_ue6fl")
+
+[node name="Object_7" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode/head top_002_2" parent_id_path=PackedInt32Array(918423723, 1834543100) index="3" unique_id=2133280601]
+surface_material_override/0 = SubResource("StandardMaterial3D_ue6fl")
+
+[node name="Object_9" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode/head bottom_002_3" parent_id_path=PackedInt32Array(918423723, 497294017) index="0" unique_id=766334196]
+surface_material_override/0 = SubResource("StandardMaterial3D_ue6fl")
+
+[node name="Object_10" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode/head bottom_002_3" parent_id_path=PackedInt32Array(918423723, 497294017) index="1" unique_id=979191274]
+surface_material_override/0 = SubResource("StandardMaterial3D_ue6fl")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=753954371]
+visible = false
+mesh = SubResource("CapsuleMesh_hftd5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=420763917]
+shape = SubResource("CapsuleShape3D_667dm")
+
+[node name="Label3D" type="Label3D" parent="." unique_id=491766357]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+billboard = 1
+text = "Frase"
+font_size = 69
+
+[editable path="Sketchfab_Scene"]

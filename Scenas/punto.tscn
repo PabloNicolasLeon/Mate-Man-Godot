@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://da7nlqlun03px"]
+
+[ext_resource type="Script" uid="uid://b6qw0mdwuq6je" path="res://punto.gd" id="1_s7qdy"]
+[ext_resource type="PackedScene" uid="uid://pg2hepb0hbvk" path="res://Modelos/mate_argentino_-_lowpoly_-_free_download.glb" id="2_d6gt5"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_pvmk6"]
+radius = 0.14897463
+
+[node name="Punto" type="Area3D" unique_id=1039388371]
+script = ExtResource("1_s7qdy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=296575520]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -0.19871229, 0.0091903955, 0.08709881)
+shape = SubResource("SphereShape3D_pvmk6")
+
+[node name="Sketchfab_Scene" parent="." unique_id=1527317986 instance=ExtResource("2_d6gt5")]
+transform = Transform3D(30, 0, 0, 0, 30, 0, 0, 0, 30, -1.825502, 0.21511292, -1.1771573)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

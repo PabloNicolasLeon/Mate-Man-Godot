@@ -1,0 +1,2695 @@
+[gd_scene format=3 uid="uid://bbbsutb0aul6c"]
+
+[ext_resource type="Script" uid="uid://cnkyt3uo48csg" path="res://player2.gd" id="1_gi8bd"]
+[ext_resource type="PackedScene" uid="uid://b85v10h48s62u" path="res://Modelos/godot_logo.glb" id="2_a8exk"]
+[ext_resource type="PackedScene" uid="uid://da7nlqlun03px" path="res://Scenas/punto.tscn" id="2_yrt48"]
+[ext_resource type="PackedScene" uid="uid://bip22r1am75u2" path="res://Scenas/don_satur.tscn" id="3_aj8na"]
+[ext_resource type="Texture2D" uid="uid://oack8jr1o70f" path="res://Modelos/suelo_0.jpg" id="3_iog13"]
+[ext_resource type="PackedScene" uid="uid://csso4o4lpkmgl" path="res://Modelos/pared-intercalada.glb" id="4_db682"]
+[ext_resource type="PackedScene" uid="uid://do2adi51iyq2d" path="res://Scenas/enemigo.tscn" id="4_nhvok"]
+[ext_resource type="Script" uid="uid://6hhmyalvuor2" path="res://barra_palida.gd" id="6_xdqvp"]
+[ext_resource type="ArrayMesh" uid="uid://bri7baer8rm2l" path="res://Modelos/school chair.obj" id="7_gi8bd"]
+[ext_resource type="Script" uid="uid://btu4usn7nbpud" path="res://camera_3d.gd" id="9_a8exk"]
+[ext_resource type="Script" uid="uid://dqc82nmwmq73" path="res://Scenas/interfaz.gd" id="9_qsdrw"]
+[ext_resource type="AudioStream" uid="uid://tp0tv7ybip3u" path="res://Musica/Pacman - Game Over Sound Effect (HD).mp3" id="11_qsdrw"]
+[ext_resource type="PackedScene" uid="uid://dg27jqq0a3owp" path="res://Modelos/pizarra (1).glb" id="12_o5xiv"]
+[ext_resource type="PackedScene" uid="uid://balbt2xlb0msl" path="res://Modelos/puerta_de_madera.glb" id="13_qsdrw"]
+[ext_resource type="PackedScene" uid="uid://caj3ytiucb0v6" path="res://Modelos/ventana.glb" id="14_l1rco"]
+[ext_resource type="AudioStream" uid="uid://21gs5b3rqkjx" path="res://Musica/CAMBALACHE - ENRIQUE SANTOS DISCÉPOLO.mp3" id="16_l1rco"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_8qq5d"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_a0t12"]
+height = 2.3483887
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_13peh"]
+albedo_color = Color(0.03529412, 0.15294118, 0.18431373, 0.43137255)
+albedo_texture = ExtResource("3_iog13")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_a0t12"]
+material = SubResource("StandardMaterial3D_13peh")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_yrt48"]
+data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_8gxv6"]
+size = Vector3(1, 1, 20.037933)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wfcmb"]
+size = Vector3(1.0380249, 1.0825195, 20.076355)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ipna8"]
+size = Vector3(4.634533, 1.0180054, 0.64746094)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_chbw3"]
+size = Vector3(4.494568, 1, 0.704834)
+
+[sub_resource type="BoxMesh" id="BoxMesh_a0t12"]
+size = Vector3(0.87841797, 1, 11.802367)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ptj5d"]
+size = Vector3(0.9248352, 1.0883789, 11.772892)
+
+[sub_resource type="BoxMesh" id="BoxMesh_n0mhy"]
+size = Vector3(1, 1, 36.00699)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vx0rj"]
+size = Vector3(1.0753174, 1, 36.473785)
+
+[sub_resource type="BoxMesh" id="BoxMesh_wfcmb"]
+size = Vector3(12.078262, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ktb15"]
+size = Vector3(12.188232, 1, 1.1815186)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7rtvl"]
+size = Vector3(0.8664551, 1.0296326, 0.68518066)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n0mhy"]
+albedo_color = Color(0.03529412, 0.15294118, 0.18431373, 0.43137255)
+albedo_texture = ExtResource("3_iog13")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ptj5d"]
+material = SubResource("StandardMaterial3D_n0mhy")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ipna8"]
+size = Vector3(0.6781616, 0.0034296876, 0.6590576)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ptj5d"]
+albedo_color = Color(0.03529412, 0.15294118, 0.18431373, 0.43137255)
+albedo_texture = ExtResource("3_iog13")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_7rtvl"]
+material = SubResource("StandardMaterial3D_ptj5d")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8gxv6"]
+size = Vector3(0.40771484, 0.001, 0.40707397)
+
+[node name="mundo2" type="Node3D" unique_id=1036634365]
+
+[node name="Player" type="CharacterBody3D" parent="." unique_id=254995571]
+transform = Transform3D(-0.9999859, 0, -0.0053337496, 0, 1, 0, 0.0053337496, 0, -0.9999859, -0.33166307, 0.4833461, -7.802093)
+script = ExtResource("1_gi8bd")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player" unique_id=2017335020]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.1593312, 0)
+visible = false
+mesh = SubResource("CapsuleMesh_8qq5d")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player" unique_id=1891785248]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.021541595, 0.17109382, 0)
+shape = SubResource("CapsuleShape3D_a0t12")
+
+[node name="Cenital" type="Camera3D" parent="Player" unique_id=309117865]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 9, 0)
+current = true
+
+[node name="Tercera Persona" type="Camera3D" parent="Player" unique_id=53307042]
+transform = Transform3D(1, 0, 0, 0, 0.90630776, 0.42261827, 0, -0.42261827, 0.90630776, 0, 2.5, 3.5)
+
+[node name="Sketchfab_Scene" parent="Player" unique_id=918423723 instance=ExtResource("2_a8exk")]
+transform = Transform3D(0.0030155308, 0, -0.1079579, 0, 0.108, 0, 0.1079579, 0, 0.0030155308, 0, -0.120396435, 0)
+
+[node name="piso" type="MeshInstance3D" parent="." unique_id=667567180]
+transform = Transform3D(9, 0, 0, 0, 9, 0, 0, 0, 9, 0.05589509, 0.11053991, 0.0051870346)
+mesh = SubResource("PlaneMesh_a0t12")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="piso" unique_id=1307939241]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="piso/StaticBody3D" unique_id=231256505]
+shape = SubResource("ConcavePolygonShape3D_yrt48")
+
+[node name="paredes 1erpiso" type="Node3D" parent="." unique_id=1342837781]
+
+[node name="Sketchfab_Scene" parent="paredes 1erpiso" unique_id=227371005 instance=ExtResource("4_db682")]
+transform = Transform3D(1.1284362, 0, 0, 0, 0.5055646, 0, 0, 0, 1, -0.5273963, -0.6740017, 23.902327)
+
+[node name="Sketchfab_Scene2" parent="paredes 1erpiso" unique_id=527776505 instance=ExtResource("4_db682")]
+transform = Transform3D(-0.002377799, 0, -0.9999506, 0, 0.50556445, 0, 1.1543278, 0, -0.0020597982, -4.058289, -0.6740017, 19.199642)
+
+[node name="Sketchfab_Scene4" parent="paredes 1erpiso" unique_id=227399194 instance=ExtResource("4_db682")]
+transform = Transform3D(-0.002377799, 0, -0.9999506, 0, 0.50556445, 0, 1.1543278, 0, -0.0020597982, -8.003847, -0.6740017, 3.394887)
+
+[node name="Sketchfab_Scene6" parent="paredes 1erpiso" unique_id=44626232 instance=ExtResource("4_db682")]
+transform = Transform3D(0.0017951354, 0, 0.9999515, 0, 0.5055644, 0, -1.1543287, 0, 0.0015550628, 8.115401, -0.6740017, 4.425102)
+
+[node name="Sketchfab_Scene12" parent="paredes 1erpiso" unique_id=1598504088 instance=ExtResource("4_db682")]
+transform = Transform3D(0.7748425, 0, 0.004123291, 0, 0.5055643, 0, -0.003199428, 0, 0.99858665, 5.348862, -0.6740017, 8.061787)
+
+[node name="Sketchfab_Scene13" parent="paredes 1erpiso" unique_id=1440154720 instance=ExtResource("4_db682")]
+transform = Transform3D(0.7748425, 0, 0.004123291, 0, 0.5055643, 0, -0.003199428, 0, 0.99858665, -5.9367657, -0.6740017, 8.052846)
+
+[node name="Sketchfab_Scene7" parent="paredes 1erpiso" unique_id=393869588 instance=ExtResource("4_db682")]
+transform = Transform3D(0.0017951354, 0, 0.9999515, 0, 0.5055644, 0, -1.1543287, 0, 0.0015550628, 8.115401, -0.6740017, -3.7273192)
+
+[node name="Sketchfab_Scene5" parent="paredes 1erpiso" unique_id=1074718017 instance=ExtResource("4_db682")]
+transform = Transform3D(-0.002377799, 0, -0.9999506, 0, 0.50556445, 0, 1.1543278, 0, -0.0020597982, -8.003847, -0.6740017, -4.721756)
+
+[node name="Sketchfab_Scene8" parent="paredes 1erpiso" unique_id=457436892 instance=ExtResource("4_db682")]
+transform = Transform3D(-1.154298, 0, -0.007480964, 0, 0.5055644, 0, 0.008635901, 0, -0.99992466, -3.451726, -0.6740017, -8.006695)
+
+[node name="Sketchfab_Scene9" parent="paredes 1erpiso" unique_id=1201893514 instance=ExtResource("4_db682")]
+transform = Transform3D(-1.154298, 0, -0.007480964, 0, 0.5055644, 0, 0.008635901, 0, -0.99992466, 4.6926904, -0.6740017, -8.029876)
+
+[node name="Sketchfab_Scene3" parent="paredes 1erpiso" unique_id=1743742777 instance=ExtResource("4_db682")]
+transform = Transform3D(-0.0007861903, 0, 1.0000113, 0, 0.5055644, 0, -1.1475786, 0, -0.00068510184, 3.91711, -0.6740017, 20.255552)
+
+[node name="Sketchfab_Scene10" parent="paredes 1erpiso" unique_id=1481218219 instance=ExtResource("4_db682")]
+transform = Transform3D(-0.0005661421, 0, 0.9998116, 0, 0.5055644, 0, -0.8263807, 0, -0.00068496505, 2.1882348, -0.6740017, 12.228667)
+
+[node name="Sketchfab_Scene11" parent="paredes 1erpiso" unique_id=1351633508 instance=ExtResource("4_db682")]
+transform = Transform3D(-0.0018552868, 0, -0.9998092, 0, 0.5055643, 0, 0.82637876, 0, -0.0022446434, -2.065757, -0.6740017, 11.466416)
+
+[node name="paredes 2dopiso" type="Node3D" parent="paredes 1erpiso" unique_id=1203072791]
+transform = Transform3D(1, 0, -2.9802322e-08, -1.4901161e-08, 1, 2.9802322e-08, 2.9802322e-08, 0, 1.0000001, 7.1525574e-07, 0, 9.536743e-07)
+
+[node name="pared1" type="MeshInstance3D" parent="paredes 1erpiso/paredes 2dopiso" unique_id=1230656080]
+transform = Transform3D(0.5, 0, 0, 0, 1.9386654, 0, 0, 0, 0.5, -4.760523, 0.34215412, 19.84793)
+mesh = SubResource("BoxMesh_8gxv6")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="paredes 1erpiso/paredes 2dopiso/pared1" unique_id=915707285]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="paredes 1erpiso/paredes 2dopiso/pared1/StaticBody3D" unique_id=2133543519]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.015045166, 0.041259766, -0.0030822754)
+shape = SubResource("BoxShape3D_wfcmb")
+
+[node name="pared2" type="MeshInstance3D" parent="paredes 1erpiso/paredes 2dopiso" unique_id=258574940]
+transform = Transform3D(0.5, 0, 0, 0, 1.9610385, 0, 0, 0, 0.5, 4.7440557, 0.34215412, 19.84793)
+mesh = SubResource("BoxMesh_8gxv6")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="paredes 1erpiso/paredes 2dopiso/pared2" unique_id=1085107453]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="paredes 1erpiso/paredes 2dopiso/pared2/StaticBody3D" unique_id=1434886250]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.015045166, 0.041259766, -0.0030822754)
+shape = SubResource("BoxShape3D_wfcmb")
+
+[node name="pared3" type="MeshInstance3D" parent="paredes 1erpiso/paredes 2dopiso" unique_id=568510613]
+transform = Transform3D(0.00071221776, 0, -0.49999955, 0, 1.9587451, 0, 0.49999955, 0, 0.00071221776, -0.014120339, 0.34215412, 24.613161)
+mesh = SubResource("BoxMesh_8gxv6")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="paredes 1erpiso/paredes 2dopiso/pared3" unique_id=47348744]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="paredes 1erpiso/paredes 2dopiso/pared3/StaticBody3D" unique_id=1774663592]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.015045166, 0.041259766, -0.0030822754)
+shape = SubResource("BoxShape3D_wfcmb")
+
+[node name="pared4" type="MeshInstance3D" parent="paredes 1erpiso/paredes 2dopiso" unique_id=101431429]
+transform = Transform3D(0.5, 0, 0, 0, 1.9317514, 0, 0, 0, 0.5, 3.7795153, 0.34409901, 15.004038)
+mesh = SubResource("BoxMesh_ipna8")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="paredes 1erpiso/paredes 2dopiso/pared4" unique_id=372278690]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.017478943)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="paredes 1erpiso/paredes 2dopiso/pared4/StaticBody3D" unique_id=73436146]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.073516846, 0, 0.002319336)
+shape = SubResource("BoxShape3D_chbw3")
+
+[node name="pared5" type="MeshInstance3D" parent="paredes 1erpiso/paredes 2dopiso" unique_id=78006883]
+transform = Transform3D(0.5, 0, 0, 0, 1.9042846, 0, 0, 0, 0.5, -3.6705818, 0.34409901, 15.004038)
+mesh = SubResource("BoxMesh_ipna8")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="paredes 1erpiso/paredes 2dopiso/pared5" unique_id=243811336]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="paredes 1erpiso/paredes 2dopiso/pared5/StaticBody3D" unique_id=23567632]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.014587402, 0, 0.002319336)
+shape = SubResource("BoxShape3D_chbw3")
+
+[node name="paredes pasillo" type="Node3D" parent="paredes 1erpiso" unique_id=543019709]
+transform = Transform3D(1, 0, 0, 0, 1.2720333, 0, 0, 0, 1, 0, -0.07436898, 0)
+
+[node name="pared 1" type="MeshInstance3D" parent="paredes 1erpiso/paredes pasillo" unique_id=1497497396]
+transform = Transform3D(0.5, 0, 0, 0, 1.5039215, 0, 0, 0, 0.5, -2.7406514, 0.3356843, 11.91893)
+mesh = SubResource("BoxMesh_a0t12")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="paredes 1erpiso/paredes pasillo/pared 1" unique_id=30933136]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.40902758, 0.28550172, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="paredes 1erpiso/paredes pasillo/pared 1/StaticBody3D" unique_id=1704205741]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.43407822, -0.28886533, -0.00758934)
+shape = SubResource("BoxShape3D_ptj5d")
+
+[node name="pared 2" type="MeshInstance3D" parent="paredes 1erpiso/paredes pasillo" unique_id=1785302763]
+transform = Transform3D(0.5, 0, 0, 0, 1.5091844, 0, 0, 0, 0.5, 2.8414404, 0.34516865, 11.91893)
+mesh = SubResource("BoxMesh_a0t12")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="paredes 1erpiso/paredes pasillo/pared 2" unique_id=1084957673]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.40902758, 0.28550172, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="paredes 1erpiso/paredes pasillo/pared 2/StaticBody3D" unique_id=719680185]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.36512375, -0.28886533, 0.008430481)
+shape = SubResource("BoxShape3D_ptj5d")
+
+[node name="pared1" type="MeshInstance3D" parent="paredes 1erpiso" unique_id=1756529215]
+transform = Transform3D(0.5, 0, 0, 0, 1.8827479, 0, 0, 0, 0.5, -8.735286, 0.3703026, -0.0052890778)
+mesh = SubResource("BoxMesh_n0mhy")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="paredes 1erpiso/pared1" unique_id=1373968162]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="paredes 1erpiso/pared1/StaticBody3D" unique_id=642455231]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.04447174, 0, 0)
+shape = SubResource("BoxShape3D_vx0rj")
+
+[node name="pared2" type="MeshInstance3D" parent="paredes 1erpiso" unique_id=313086232]
+transform = Transform3D(0.5, 0, 0, 0, 1.8195294, 0, 0, 0, 0.5, 8.815736, 0.3703026, -0.0052890778)
+mesh = SubResource("BoxMesh_n0mhy")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="paredes 1erpiso/pared2" unique_id=1809065612]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="paredes 1erpiso/pared2/StaticBody3D" unique_id=1776620693]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0053100586, 0, -0.034713745)
+shape = SubResource("BoxShape3D_vx0rj")
+
+[node name="pared3" type="MeshInstance3D" parent="paredes 1erpiso" unique_id=1159530147]
+transform = Transform3D(-0.0004665947, 0, -0.4999998, 0, 1.8209428, 0, 0.4999998, 0, -0.0004665947, 0.09720898, 0.3703026, -8.75438)
+mesh = SubResource("BoxMesh_n0mhy")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="paredes 1erpiso/pared3" unique_id=743286158]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="paredes 1erpiso/pared3/StaticBody3D" unique_id=119429998]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0053100586, 0, -0.034713745)
+shape = SubResource("BoxShape3D_vx0rj")
+
+[node name="pared4" type="MeshInstance3D" parent="paredes 1erpiso" unique_id=481305956]
+transform = Transform3D(0.5, 0, 0, 0, 1.8746163, 0, 0, 0, 0.5, 5.637812, 0.38171294, 8.748929)
+mesh = SubResource("BoxMesh_wfcmb")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="paredes 1erpiso/pared4" unique_id=1047880304]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="paredes 1erpiso/pared4/StaticBody3D" unique_id=735173509]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02355957, 0, -0.0024871826)
+shape = SubResource("BoxShape3D_ktb15")
+
+[node name="pared5" type="MeshInstance3D" parent="paredes 1erpiso" unique_id=1506519033]
+transform = Transform3D(0.5, 0, 0, 0, 1.8211247, 0, 0, 0, 0.5, -5.5405607, 0.38171294, 8.748929)
+mesh = SubResource("BoxMesh_wfcmb")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="paredes 1erpiso/pared5" unique_id=2058966030]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="paredes 1erpiso/pared5/StaticBody3D" unique_id=558851798]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.019897461, 0, -0.0024871826)
+shape = SubResource("BoxShape3D_ktb15")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=258833419]
+transform = Transform3D(0.303878, 0.763947, 0.56924796, -0.91753983, 0.073823504, 0.39073113, 0.256474, -0.6410423, 0.7233851, 2.03, 5.667, -11.8)
+light_energy = 10.98
+
+[node name="Bancos" type="Node3D" parent="." unique_id=865893112]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15605879, 0, -0.07125139)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Bancos" unique_id=491040133]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4154372, 0.32197118, -4.881871)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D" unique_id=698928204]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D" unique_id=1290202622]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3463664, 0.30742705, -0.6219859)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="Bancos" unique_id=2084300386]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4425721, 0.32197118, -4.881871)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D2" unique_id=1177691858]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D2" unique_id=576508175]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3463664, 0.30742705, -0.6219859)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="Bancos" unique_id=329019192]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5126331, 0.32197118, -4.881871)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D3" unique_id=989721515]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D3" unique_id=409400872]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3463664, 0.30742705, -0.6219859)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="Bancos" unique_id=680641116]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4662478, 0.32197118, -4.881871)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D4" unique_id=13994817]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D4" unique_id=1567801527]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3463664, 0.30742705, -0.6219859)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D5" type="StaticBody3D" parent="Bancos" unique_id=24819581]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4370763, 0.32197118, -4.881871)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D5" unique_id=542802449]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D5" unique_id=1115009885]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3463664, 0.30742705, -0.6219859)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D6" type="StaticBody3D" parent="Bancos" unique_id=1914597710]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3831055, 0.32197118, -4.881871)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D6" unique_id=1507173320]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D6" unique_id=150665778]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3463664, 0.30742705, -0.6219859)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D7" type="StaticBody3D" parent="Bancos" unique_id=173452776]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3831055, 0.32197118, -3.8974535)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D7" unique_id=2007594339]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D7" unique_id=287356936]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3463664, 0.30742705, -0.6219859)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D8" type="StaticBody3D" parent="Bancos" unique_id=135281033]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3831055, 0.32197118, -3.015478)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D8" unique_id=1412381977]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D8" unique_id=2123375046]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3463664, 0.30742705, -0.6219859)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D78" type="StaticBody3D" parent="Bancos" unique_id=505529308]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3831055, 0.32197118, -2.1433387)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D78" unique_id=1862411513]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D78" unique_id=1217083918]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3463664, 0.30742705, -0.6219859)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D9" type="StaticBody3D" parent="Bancos" unique_id=570751928]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3831055, 0.32197118, -2.150774)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D9" unique_id=1664482540]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3463664, 0.30742705, -0.6219859)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D10" type="StaticBody3D" parent="Bancos" unique_id=54752260]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0080745, 0.32197118, 4.7296352)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D10" unique_id=1487073271]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D10" unique_id=1148055079]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3463664, 0.30742705, -0.6219859)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D11" type="StaticBody3D" parent="Bancos" unique_id=1984402822]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0659773, 0.32197118, 4.7296352)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D11" unique_id=1583186584]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D11" unique_id=705681597]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3463664, 0.30742705, -0.6219859)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D12" type="StaticBody3D" parent="Bancos" unique_id=853279279]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12438893, 0.32197118, 4.7296352)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D12" unique_id=1034912309]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D12" unique_id=925429376]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3463664, 0.30742705, -0.6219859)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D14" type="StaticBody3D" parent="Bancos" unique_id=1228874781]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8674396, 0.32197118, 4.7296352)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D14" unique_id=225033263]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D14" unique_id=198653933]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3463664, 0.30742705, -0.6219859)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D15" type="StaticBody3D" parent="Bancos" unique_id=1325726492]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8385756, 0.32197118, 4.7296352)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D15" unique_id=669509707]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D15" unique_id=212699446]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3463664, 0.30742705, -0.6219859)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D16" type="StaticBody3D" parent="Bancos" unique_id=882620628]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.1042404, 0.32197118, 7.146984)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D16" unique_id=2106351734]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D16" unique_id=893536615]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3463664, 0.30742705, -0.6219859)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D17" type="StaticBody3D" parent="Bancos" unique_id=907250776]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.1042404, 0.32197118, 6.3469505)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D17" unique_id=1271074687]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.2666965)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D17" unique_id=712293968]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3463664, 0.30742705, -0.6219859)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D18" type="StaticBody3D" parent="Bancos" unique_id=1689797443]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.1042404, 0.32197118, 5.583559)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D18" unique_id=10628196]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D18" unique_id=1348159931]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3463664, 0.30742705, -0.6219859)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D19" type="StaticBody3D" parent="Bancos" unique_id=564521074]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.147761, 0.32197118, 7.124364)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D19" unique_id=1475756414]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D19" unique_id=688486313]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3463664, 0.30742705, -0.6219859)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D20" type="StaticBody3D" parent="Bancos" unique_id=265260671]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.1944466, 0.32197118, 7.124364)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D20" unique_id=1382134743]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D20" unique_id=11434520]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3463664, 0.30742705, -0.6219859)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D21" type="StaticBody3D" parent="Bancos" unique_id=787228394]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.244152, 0.32197118, 7.124364)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D21" unique_id=1448328711]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D21" unique_id=1925832542]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3463664, 0.30742705, -0.6219859)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D22" type="StaticBody3D" parent="Bancos" unique_id=1056920544]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.068239, 0.32197118, 7.093108)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D22" unique_id=1956072402]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D22" unique_id=878131608]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3463664, 0.30742705, -0.6219859)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D23" type="StaticBody3D" parent="Bancos" unique_id=677428768]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1394129, 0.32197118, 7.093108)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D23" unique_id=2007246471]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D23" unique_id=935455109]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3463664, 0.30742705, -0.6219859)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D24" type="StaticBody3D" parent="Bancos" unique_id=1837907365]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2325165, 0.32197118, 7.093108)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D24" unique_id=1433480241]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D24" unique_id=1787668613]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3463664, 0.30742705, -0.6219859)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D25" type="StaticBody3D" parent="Bancos" unique_id=381684770]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.636529, 0.32197118, 0.9967065)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D25" unique_id=184756066]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D25" unique_id=229585476]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3463664, 0.30742705, -0.6219859)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D26" type="StaticBody3D" parent="Bancos" unique_id=452068590]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.092749, 0.32197118, 0.9679961)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D26" unique_id=1940830135]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D26" unique_id=1839094208]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.328155, 0.30742705, -0.6219859)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D27" type="StaticBody3D" parent="Bancos" unique_id=4149238]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.2216625, 0.32197118, -0.538836)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D27" unique_id=1166690287]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D27" unique_id=1692778732]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3463664, 0.30742705, -0.6219859)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D28" type="StaticBody3D" parent="Bancos" unique_id=298294328]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.636529, 0.32197118, -4.39825)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D28" unique_id=1703604357]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D28" unique_id=695780469]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3463664, 0.30742705, -0.6219859)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D29" type="StaticBody3D" parent="Bancos" unique_id=447280233]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.660313, 0.32197118, -4.39825)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D29" unique_id=1804354406]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D29" unique_id=495475785]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3463664, 0.30742705, -0.6219859)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D30" type="StaticBody3D" parent="Bancos" unique_id=140661318]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.722867, 0.32197118, -4.39825)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D30" unique_id=1964537498]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D30" unique_id=948873389]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3463664, 0.30742705, -0.6219859)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D31" type="StaticBody3D" parent="Bancos" unique_id=500501425]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.724551, 0.32197118, -5.9020257)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D31" unique_id=1803900405]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D31" unique_id=1108355905]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3463664, 0.30742705, -0.6219859)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D32" type="StaticBody3D" parent="Bancos" unique_id=358013492]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.653257, 0.32197118, -5.8962364)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D32" unique_id=437901619]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D32" unique_id=942177040]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3463664, 0.30742705, -0.6219859)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D33" type="StaticBody3D" parent="Bancos" unique_id=1269294266]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.634995, 0.32197118, -5.8933005)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D33" unique_id=1345258637]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D33" unique_id=1474950451]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3463664, 0.30742705, -0.6219859)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D35" type="StaticBody3D" parent="Bancos" unique_id=658434911]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10156131, 0.32197118, 1.8206482)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D35" unique_id=36908509]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D35" unique_id=1568211600]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3305936, 0.30742705, -0.6050062)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D36" type="StaticBody3D" parent="Bancos" unique_id=1298925542]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.115857124, 0.32197118, 2.5294085)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D36" unique_id=53118739]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D36" unique_id=1864858771]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3305936, 0.30742705, -0.6050062)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D37" type="StaticBody3D" parent="Bancos" unique_id=886204681]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.09703779, 0.32197118, 3.2288456)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D37" unique_id=2118606452]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D37" unique_id=440294937]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3305936, 0.30742705, -0.6050062)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D38" type="StaticBody3D" parent="Bancos" unique_id=1233390498]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11127138, 0.32197118, 3.9918318)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D38" unique_id=1130636256]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D38" unique_id=1800727196]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3305936, 0.30742705, -0.6050062)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D39" type="StaticBody3D" parent="Bancos" unique_id=1033007567]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0337651, 0.32197118, 1.8082604)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D39" unique_id=101726342]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D39" unique_id=812464598]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3305936, 0.30742705, -0.6050062)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D40" type="StaticBody3D" parent="Bancos" unique_id=500106765]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9634371, 0.32197118, 1.8082604)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D40" unique_id=395444960]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D40" unique_id=113422161]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3305936, 0.30742705, -0.6050062)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D41" type="StaticBody3D" parent="Bancos" unique_id=1930635146]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8801627, 0.32197118, 3.9323454)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D41" unique_id=798304298]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D41" unique_id=1740936397]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3305936, 0.30742705, -0.6050062)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D42" type="StaticBody3D" parent="Bancos" unique_id=2385390]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.1092467, 0.32197118, 4.7706957)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D42" unique_id=1838328155]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D42" unique_id=1186075162]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3305936, 0.30742705, -0.6050062)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D43" type="StaticBody3D" parent="Bancos" unique_id=1898626542]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.344372, 0.32197118, 7.1295557)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D43" unique_id=1287738318]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D43" unique_id=913721627]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3305936, 0.30742705, -0.6050062)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D44" type="StaticBody3D" parent="Bancos" unique_id=302430374]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.344372, 0.32197118, 6.4260035)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D44" unique_id=403874962]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D44" unique_id=811314969]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3305936, 0.30742705, -0.6050062)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D45" type="StaticBody3D" parent="Bancos" unique_id=1771001394]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.344372, 0.32197118, 5.6470346)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D45" unique_id=1529806614]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D45" unique_id=750762186]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3305936, 0.30742705, -0.6050062)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D46" type="StaticBody3D" parent="Bancos" unique_id=1369334112]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.351475, 0.32197118, 4.9189014)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D46" unique_id=1611182850]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D46" unique_id=1850639468]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3305936, 0.30742705, -0.6050062)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D47" type="StaticBody3D" parent="Bancos" unique_id=439020582]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.461891, 0.32197118, 4.8955984)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D47" unique_id=152704832]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D47" unique_id=1636575272]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3305936, 0.30742705, -0.6050062)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D48" type="StaticBody3D" parent="Bancos" unique_id=60216667]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.466604, 0.32197118, 4.8955984)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D48" unique_id=2011089074]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D48" unique_id=2105802883]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3305936, 0.30742705, -0.6050062)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D49" type="StaticBody3D" parent="Bancos" unique_id=236834532]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.44165, 0.32197118, 4.150194)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D49" unique_id=126427076]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D49" unique_id=496422364]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3305936, 0.30742705, -0.6050062)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D50" type="StaticBody3D" parent="Bancos" unique_id=699633374]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.44165, 0.32197118, 3.386589)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D50" unique_id=1919223015]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D50" unique_id=1069941626]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3305936, 0.30742705, -0.6050062)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D51" type="StaticBody3D" parent="Bancos" unique_id=1478939401]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.521322, 0.32197118, 3.386589)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D51" unique_id=1550295119]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D51" unique_id=775740898]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3305936, 0.30742705, -0.6050062)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D52" type="StaticBody3D" parent="Bancos" unique_id=1584560650]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.671367, 0.32197118, 1.7293868)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D52" unique_id=172165522]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D52" unique_id=690460767]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3305936, 0.30742705, -0.6050062)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D53" type="StaticBody3D" parent="Bancos" unique_id=1754008968]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.154846, 0.32197118, -0.5701568)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D53" unique_id=1038846117]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D53" unique_id=40784125]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3305936, 0.30742705, -0.6050062)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D54" type="StaticBody3D" parent="Bancos" unique_id=595788220]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.175253, 0.32197118, 0.19665527)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D54" unique_id=1642085998]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D54" unique_id=630363400]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3305936, 0.30742705, -0.6050062)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D55" type="StaticBody3D" parent="Bancos" unique_id=285859428]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.9655485, 0.32197118, -2.258941)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D55" unique_id=746415650]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D55" unique_id=1723779253]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3305936, 0.30742705, -0.6050062)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D56" type="StaticBody3D" parent="Bancos" unique_id=634073271]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.032005, 0.32197118, -2.258941)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D56" unique_id=1589995280]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D56" unique_id=438363839]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3305936, 0.30742705, -0.6050062)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D57" type="StaticBody3D" parent="Bancos" unique_id=1440669275]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.079393, 0.32197118, -2.258941)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D57" unique_id=1888037867]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D57" unique_id=959982283]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3305936, 0.30742705, -0.6050062)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D58" type="StaticBody3D" parent="Bancos" unique_id=1022051619]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.118589, 0.32197118, -2.258941)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D58" unique_id=513899603]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D58" unique_id=1820350366]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3305936, 0.30742705, -0.6050062)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D59" type="StaticBody3D" parent="Bancos" unique_id=619802022]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.1978297, 0.32197118, -2.258941)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D59" unique_id=2031759873]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D59" unique_id=1651373479]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3305936, 0.30742705, -0.6050062)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D60" type="StaticBody3D" parent="Bancos" unique_id=1649688768]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.230151, 0.32197118, -2.258941)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D60" unique_id=1154973820]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D60" unique_id=452546908]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3305936, 0.30742705, -0.6050062)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D61" type="StaticBody3D" parent="Bancos" unique_id=2091045577]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6110649, 0.32197118, -0.55324745)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D61" unique_id=1908990687]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D61" unique_id=11105711]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3305936, 0.30742705, -0.6050062)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D62" type="StaticBody3D" parent="Bancos" unique_id=1440701975]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.330916, 0.32197118, -2.297409)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D62" unique_id=352622755]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D62" unique_id=1446527076]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3305936, 0.30742705, -0.6050062)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D63" type="StaticBody3D" parent="Bancos" unique_id=610966181]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5290089, 0.32197118, -0.5681288)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D63" unique_id=1384453515]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D63" unique_id=533053624]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3305936, 0.30742705, -0.6050062)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D64" type="StaticBody3D" parent="Bancos" unique_id=867147693]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3178, 0.32197118, 2.234289)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D64" unique_id=1970634401]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D64" unique_id=828480093]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3305936, 0.30742705, -0.6050062)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D65" type="StaticBody3D" parent="Bancos" unique_id=888765702]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.388943, 0.32197118, 2.234289)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D65" unique_id=1328912492]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D65" unique_id=1958414738]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3305936, 0.30742705, -0.6050062)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D66" type="StaticBody3D" parent="Bancos" unique_id=1311698856]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4711623, 0.32197118, 2.234289)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D66" unique_id=622287147]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D66" unique_id=482291337]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3305936, 0.30742705, -0.6050062)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D67" type="StaticBody3D" parent="Bancos" unique_id=2089094898]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.67310786, 0.32197118, -0.5750749)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D67" unique_id=470096314]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D67" unique_id=222796289]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3305936, 0.30742705, -0.6050062)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D69" type="StaticBody3D" parent="Bancos" unique_id=251463263]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2011251, 0.32197118, 11.787298)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D69" unique_id=180051242]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3712325, 0.0014972687, -1.3107872)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D69" unique_id=1159353338]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3305936, 0.30742705, -0.6050062)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D70" type="StaticBody3D" parent="Bancos" unique_id=254699196]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.068911, 0.32197118, 11.787298)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D70" unique_id=1147634431]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D70" unique_id=948824441]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3305936, 0.30742705, -0.6050062)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D71" type="StaticBody3D" parent="Bancos" unique_id=1925295531]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.068911, 0.32197118, 11.105629)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D71" unique_id=633533585]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D71" unique_id=994501080]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3305936, 0.30742705, -0.6050062)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D72" type="StaticBody3D" parent="Bancos" unique_id=1381572467]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.068911, 0.32197118, 10.416235)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D72" unique_id=477392363]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D72" unique_id=1563664828]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3305936, 0.30742705, -0.6050062)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D73" type="StaticBody3D" parent="Bancos" unique_id=1561545776]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.203897, 0.32197118, 13.803116)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D73" unique_id=1532070820]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D73" unique_id=1713076240]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3305936, 0.30742705, -0.6050062)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D74" type="StaticBody3D" parent="Bancos" unique_id=538485125]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.309875, 0.32197118, 13.803116)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D74" unique_id=317452400]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D74" unique_id=1518681139]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3305936, 0.30742705, -0.6050062)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D75" type="StaticBody3D" parent="Bancos" unique_id=110292400]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.3225884, 0.32197118, 14.54604)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D75" unique_id=1943341698]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D75" unique_id=817671478]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3305936, 0.30742705, -0.6050062)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D76" type="StaticBody3D" parent="Bancos" unique_id=1013353425]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.093126, 0.32197118, 16.336704)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D76" unique_id=1100591127]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D76" unique_id=1688824091]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.350139, 0.30742705, -0.60500526)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D77" type="StaticBody3D" parent="Bancos" unique_id=1374411439]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.0872636, 0.32197118, 17.096375)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bancos/StaticBody3D77" unique_id=235268904]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 4.3724275, -2.3841858e-07, -1.3109826)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D77" unique_id=304119604]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3305936, 0.30742705, -0.6050062)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D80" type="StaticBody3D" parent="Bancos" unique_id=1360511354]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.526793, 0.32197118, 19.472813)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Bancos/StaticBody3D80" unique_id=1867144007]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 9.687096, -2.1457672e-06, 1.1734791)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D80" unique_id=1032346365]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.650395, 0.30742705, 1.8899326)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D81" type="StaticBody3D" parent="Bancos" unique_id=648839245]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.607019, 0.32197118, 19.472813)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Bancos/StaticBody3D81" unique_id=2039391369]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 9.687096, -2.1457672e-06, 1.1734791)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D81" unique_id=1575982569]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.650395, 0.30742705, 1.8899326)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D82" type="StaticBody3D" parent="Bancos" unique_id=1902383288]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.683693, 0.32197118, 19.472813)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Bancos/StaticBody3D82" unique_id=1019332399]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 9.687096, -2.1457672e-06, 1.1734791)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D82" unique_id=1265784106]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.650395, 0.30742705, 1.8899326)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D83" type="StaticBody3D" parent="Bancos" unique_id=56902788]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.588459, 0.32197118, 18.778452)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Bancos/StaticBody3D83" unique_id=916051975]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 9.687096, -2.1457672e-06, 1.1734791)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D83" unique_id=1963358065]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.650395, 0.30742705, 1.8899326)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D84" type="StaticBody3D" parent="Bancos" unique_id=307748028]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.588459, 0.32197118, 18.05535)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Bancos/StaticBody3D84" unique_id=2071001262]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 9.687096, -2.1457672e-06, 1.1734791)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D84" unique_id=197435395]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.650395, 0.30742705, 1.8899326)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D85" type="StaticBody3D" parent="Bancos" unique_id=2020406980]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.588459, 0.32197118, 20.147688)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Bancos/StaticBody3D85" unique_id=1738573907]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 9.687096, -2.1457672e-06, 1.1734791)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D85" unique_id=1136935058]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.650395, 0.30742705, 1.8899326)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D86" type="StaticBody3D" parent="Bancos" unique_id=225104611]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.588459, 0.32197118, 20.838966)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Bancos/StaticBody3D86" unique_id=864506913]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 9.687096, -2.1457672e-06, 1.1734791)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D86" unique_id=356001289]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.650395, 0.30742705, 1.8899326)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D87" type="StaticBody3D" parent="Bancos" unique_id=1601775841]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5140924, 0.32197118, 21.172144)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Bancos/StaticBody3D87" unique_id=1472352023]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 9.687096, -2.1457672e-06, 1.1734791)
+mesh = ExtResource("7_gi8bd")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Bancos/StaticBody3D87" unique_id=1273353932]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 9.687096, -2.1457672e-06, 1.1734791)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D87" unique_id=1528581910]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.650395, 0.30742705, 1.8899326)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D90" type="StaticBody3D" parent="Bancos" unique_id=737678198]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.3435435, 0.32197118, 13.220804)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Bancos/StaticBody3D90" unique_id=1749633263]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 9.687096, -2.1457672e-06, 1.1734791)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D90" unique_id=169571968]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.650395, 0.30742705, 1.8899326)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D91" type="StaticBody3D" parent="Bancos" unique_id=947143753]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.3435435, 0.32197118, 13.948658)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Bancos/StaticBody3D91" unique_id=841735871]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 9.687096, -2.1457672e-06, 1.1734791)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D91" unique_id=193519982]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.650395, 0.30742705, 1.8899326)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D93" type="StaticBody3D" parent="Bancos" unique_id=1097979041]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.819527, 0.32197118, 15.64501)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Bancos/StaticBody3D93" unique_id=358420357]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 9.687096, -2.1457672e-06, 1.1734791)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D93" unique_id=1160501997]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.650395, 0.30742705, 1.8899326)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D94" type="StaticBody3D" parent="Bancos" unique_id=1970749778]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.517069, 0.32197118, 19.872564)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Bancos/StaticBody3D94" unique_id=1630193763]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 9.687096, -2.1457672e-06, 1.1734791)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D94" unique_id=1763890490]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.650395, 0.30742705, 1.8899326)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D95" type="StaticBody3D" parent="Bancos" unique_id=803142850]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.396463, 0.32197118, 15.346437)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Bancos/StaticBody3D95" unique_id=203974233]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 9.687096, -2.1457672e-06, 1.1734791)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D95" unique_id=503391009]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.650395, 0.30742705, 1.8899326)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D96" type="StaticBody3D" parent="Bancos" unique_id=1058646567]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.574404, 0.32197118, 17.048681)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Bancos/StaticBody3D96" unique_id=2060986280]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 9.687096, -2.1457672e-06, 1.1734791)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D96" unique_id=868082603]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.650395, 0.30742705, 1.8899326)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D97" type="StaticBody3D" parent="Bancos" unique_id=449260354]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.711208, 0.32197118, 17.067373)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Bancos/StaticBody3D97" unique_id=1682529765]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 9.687096, -2.1457672e-06, 1.1734791)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D97" unique_id=520333646]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.650395, 0.30742705, 1.8899326)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D99" type="StaticBody3D" parent="Bancos" unique_id=1331161783]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.8008027, 0.32197118, 16.353716)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Bancos/StaticBody3D99" unique_id=1562891961]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 9.687096, -2.1457672e-06, 1.1734791)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D99" unique_id=1622280366]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.650395, 0.30742705, 1.8899326)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D100" type="StaticBody3D" parent="Bancos" unique_id=1258851897]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.8008027, 0.32197118, 17.07157)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Bancos/StaticBody3D100" unique_id=1723176971]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 9.687096, -2.1457672e-06, 1.1734791)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D100" unique_id=1525130548]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.650395, 0.30742705, 1.8899326)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D101" type="StaticBody3D" parent="Bancos" unique_id=933043438]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.700297, 0.32197118, 17.07157)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Bancos/StaticBody3D101" unique_id=592586493]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 9.687096, -2.1457672e-06, 1.1734791)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D101" unique_id=1686982992]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.650395, 0.30742705, 1.8899326)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D102" type="StaticBody3D" parent="Bancos" unique_id=174994731]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.627407, 0.32197118, 17.07157)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Bancos/StaticBody3D102" unique_id=1743145330]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 9.687096, -2.1457672e-06, 1.1734791)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D102" unique_id=728494]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.650395, 0.30742705, 1.8899326)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D103" type="StaticBody3D" parent="Bancos" unique_id=278657801]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.6071987, 0.32197118, 17.07157)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Bancos/StaticBody3D103" unique_id=365834802]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 9.687096, -2.1457672e-06, 1.1734791)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D103" unique_id=1556158926]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.650395, 0.30742705, 1.8899326)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D104" type="StaticBody3D" parent="Bancos" unique_id=2041105244]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.7706776, 0.32197118, 19.3939)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Bancos/StaticBody3D104" unique_id=1262274080]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 9.687096, -2.1457672e-06, 1.1734791)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D104" unique_id=552492637]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.650395, 0.30742705, 1.8899326)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="StaticBody3D107" type="StaticBody3D" parent="Bancos" unique_id=1324506571]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.9178295, 0.32197118, 21.216248)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Bancos/StaticBody3D107" unique_id=186581744]
+transform = Transform3D(0.19999413, 0, -0.0015310224, 0, 0.2, 0, 0.0015310224, 0, 0.19999413, 9.687096, -2.1457672e-06, 1.1734791)
+mesh = ExtResource("7_gi8bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bancos/StaticBody3D107" unique_id=1596006880]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.650395, 0.30742705, 1.8899326)
+shape = SubResource("BoxShape3D_7rtvl")
+
+[node name="Mates puntos" type="Node3D" parent="." unique_id=1331925131]
+
+[node name="Punto" parent="Mates puntos" unique_id=1039388371 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.2701726, 0.2487694, 7.141544)
+
+[node name="Punto2" parent="Mates puntos" unique_id=1311260401 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.561106, 0.25984764, 7.141544)
+
+[node name="Punto3" parent="Mates puntos" unique_id=820723529 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.782751, 0.24754953, 7.141544)
+
+[node name="Punto4" parent="Mates puntos" unique_id=911439027 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9968567, 0.24809468, 7.141544)
+
+[node name="Punto5" parent="Mates puntos" unique_id=1683536592 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.216647, 0.2504722, 7.141544)
+
+[node name="Punto6" parent="Mates puntos" unique_id=1391047511 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4789958, 0.26171792, 7.141544)
+
+[node name="Punto7" parent="Mates puntos" unique_id=1166643716 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7419324, 0.27745867, 7.141544)
+
+[node name="Punto8" parent="Mates puntos" unique_id=13092077 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8530066, 0.25455987, 7.141544)
+
+[node name="Punto9" parent="Mates puntos" unique_id=1483045451 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.99130845, 0.2383905, 7.141544)
+
+[node name="Punto10" parent="Mates puntos" unique_id=558224762 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1094836, 0.23837191, 7.141544)
+
+[node name="Punto11" parent="Mates puntos" unique_id=430451073 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7227516, 0.23945296, 7.141544)
+
+[node name="Punto12" parent="Mates puntos" unique_id=1138937584 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6172135, 0.22876883, 7.141544)
+
+[node name="Punto13" parent="Mates puntos" unique_id=1918662562 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5034523, 0.29060417, 7.141544)
+
+[node name="Punto14" parent="Mates puntos" unique_id=66368092 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4601843, 0.29483765, 7.141544)
+
+[node name="Punto15" parent="Mates puntos" unique_id=590455173 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2120986, 0.2822907, 7.141544)
+
+[node name="Punto16" parent="Mates puntos" unique_id=765652373 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.150673, 0.19673222, 7.141544)
+
+[node name="Punto17" parent="Mates puntos" unique_id=1600169120 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.2066956, 0.19673222, 7.141544)
+
+[node name="Punto18" parent="Mates puntos" unique_id=494424334 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.185606, 0.19673222, 7.141544)
+
+[node name="Punto20" parent="Mates puntos" unique_id=863038393 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5234227, 0.2487694, 6.2323685)
+
+[node name="Punto21" parent="Mates puntos" unique_id=748811556 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.756859, 0.2487694, 6.2323685)
+
+[node name="Punto22" parent="Mates puntos" unique_id=1249112941 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.005944, 0.2487694, 6.2323685)
+
+[node name="Punto23" parent="Mates puntos" unique_id=1610298295 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.20269, 0.2487694, 6.2323685)
+
+[node name="Punto28" parent="Mates puntos" unique_id=1770013611 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.059545398, 0.2487694, 6.2323685)
+
+[node name="Punto34" parent="Mates puntos" unique_id=157316635 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.179199, 0.2487694, 6.2323685)
+
+[node name="Punto37" parent="Mates puntos" unique_id=1451346483 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.2662477, 0.2487694, 5.3450375)
+
+[node name="Punto38" parent="Mates puntos" unique_id=2044907740 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.459777, 0.2487694, 5.281291)
+
+[node name="Punto39" parent="Mates puntos" unique_id=782610859 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8024282, 0.2487694, 5.2727776)
+
+[node name="Punto40" parent="Mates puntos" unique_id=1776710005 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.989876, 0.2487694, 5.236212)
+
+[node name="Punto41" parent="Mates puntos" unique_id=136925151 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.1257935, 0.2487694, 5.236212)
+
+[node name="Punto42" parent="Mates puntos" unique_id=742879755 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.356237, 0.2487694, 5.236212)
+
+[node name="Punto43" parent="Mates puntos" unique_id=624162789 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5596924, 0.2487694, 5.236212)
+
+[node name="Punto44" parent="Mates puntos" unique_id=1306405353 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7361641, 0.2487694, 5.236212)
+
+[node name="Punto45" parent="Mates puntos" unique_id=208160399 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9168134, 0.2487694, 5.236212)
+
+[node name="Punto46" parent="Mates puntos" unique_id=1964450748 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.032365322, 0.2487694, 5.236212)
+
+[node name="Punto48" parent="Mates puntos" unique_id=1316222007 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6601284, 0.2487694, 5.236212)
+
+[node name="Punto49" parent="Mates puntos" unique_id=1572897063 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4449992, 0.2487694, 5.236212)
+
+[node name="Punto50" parent="Mates puntos" unique_id=1496489584 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3199334, 0.2487694, 5.236212)
+
+[node name="Punto51" parent="Mates puntos" unique_id=378829364 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.3314557, 0.2487694, 5.236212)
+
+[node name="Punto52" parent="Mates puntos" unique_id=2005182328 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.27641, 0.2487694, 5.236212)
+
+[node name="Punto54" parent="Mates puntos" unique_id=1370029053 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.2219434, 0.2487694, 5.236212)
+
+[node name="Punto55" parent="Mates puntos" unique_id=1342911122 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.489346, 0.2487694, 4.518482)
+
+[node name="Punto56" parent="Mates puntos" unique_id=386027200 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.2662477, 0.2487694, 4.492451)
+
+[node name="Punto57" parent="Mates puntos" unique_id=756805933 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.7124796, 0.2487694, 4.492451)
+
+[node name="Punto58" parent="Mates puntos" unique_id=497389581 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.038909, 0.2487694, 4.492451)
+
+[node name="Punto59" parent="Mates puntos" unique_id=1654924949 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.1297812, 0.2487694, 4.492451)
+
+[node name="Punto60" parent="Mates puntos" unique_id=1878264166 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3172812, 0.2487694, 4.492451)
+
+[node name="Punto61" parent="Mates puntos" unique_id=1697520481 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.544673, 0.2487694, 4.492451)
+
+[node name="Punto62" parent="Mates puntos" unique_id=1151388475 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6990848, 0.2487694, 4.492451)
+
+[node name="Punto63" parent="Mates puntos" unique_id=144931436 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.85031986, 0.2487694, 4.492451)
+
+[node name="Punto64" parent="Mates puntos" unique_id=366288424 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.004372835, 0.2487694, 4.492451)
+
+[node name="Punto66" parent="Mates puntos" unique_id=1350910228 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6916895, 0.2487694, 4.492451)
+
+[node name="Punto67" parent="Mates puntos" unique_id=540733532 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5055227, 0.2487694, 4.492451)
+
+[node name="Punto68" parent="Mates puntos" unique_id=178356793 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.34867, 0.2487694, 4.492451)
+
+[node name="Punto72" parent="Mates puntos" unique_id=1502504741 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.246594, 0.2487694, 4.492451)
+
+[node name="Punto73" parent="Mates puntos" unique_id=273566803 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.308793, 0.2487694, 3.6812458)
+
+[node name="Punto81" parent="Mates puntos" unique_id=717333187 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8068938, 0.2487694, 3.6812458)
+
+[node name="Punto82" parent="Mates puntos" unique_id=877206987 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.045419455, 0.2487694, 3.6812458)
+
+[node name="Punto84" parent="Mates puntos" unique_id=722789019 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6704923, 0.2487694, 3.6812458)
+
+[node name="Punto85" parent="Mates puntos" unique_id=718468761 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5306435, 0.2487694, 3.6812458)
+
+[node name="Punto86" parent="Mates puntos" unique_id=1988430958 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.387292, 0.2487694, 3.6812458)
+
+[node name="Punto87" parent="Mates puntos" unique_id=2111136054 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.385604, 0.2487694, 3.6812458)
+
+[node name="Punto90" parent="Mates puntos" unique_id=785251591 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.293526, 0.2487694, 3.66003)
+
+[node name="Punto91" parent="Mates puntos" unique_id=538436111 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.3288584, 0.2487694, 2.9421163)
+
+[node name="Punto92" parent="Mates puntos" unique_id=529295010 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.522232, 0.2487694, 2.9421163)
+
+[node name="Punto93" parent="Mates puntos" unique_id=1177856638 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.666251, 0.2487694, 2.9421163)
+
+[node name="Punto94" parent="Mates puntos" unique_id=860417745 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.0965676, 0.2487694, 2.9421163)
+
+[node name="Punto96" parent="Mates puntos" unique_id=242200699 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3072248, 0.2487694, 2.9421163)
+
+[node name="Punto97" parent="Mates puntos" unique_id=939191048 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5182676, 0.2487694, 2.9421163)
+
+[node name="Punto99" parent="Mates puntos" unique_id=1504736431 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.78177166, 0.2487694, 2.9421163)
+
+[node name="Punto100" parent="Mates puntos" unique_id=1960812264 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05722189, 0.2487694, 2.9421163)
+
+[node name="Punto101" parent="Mates puntos" unique_id=1897686046 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.843162, 0.2487694, 2.9421163)
+
+[node name="Punto102" parent="Mates puntos" unique_id=1737738798 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6704216, 0.2487694, 2.9421163)
+
+[node name="Punto103" parent="Mates puntos" unique_id=1724332038 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5380027, 0.2487694, 2.9421163)
+
+[node name="Punto104" parent="Mates puntos" unique_id=1133304571 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3341336, 0.2487694, 2.9421163)
+
+[node name="Punto107" parent="Mates puntos" unique_id=1176421037 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.246587, 0.2487694, 2.85885)
+
+[node name="Punto108" parent="Mates puntos" unique_id=1465270401 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.3051534, 0.2487694, 2.85885)
+
+[node name="Punto109" parent="Mates puntos" unique_id=400430710 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.3059587, 0.2487694, 2.0470762)
+
+[node name="Punto110" parent="Mates puntos" unique_id=1263171643 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.519923, 0.2487694, 2.0470762)
+
+[node name="Punto111" parent="Mates puntos" unique_id=1733820902 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.686937, 0.2487694, 2.0470762)
+
+[node name="Punto112" parent="Mates puntos" unique_id=673240956 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.096449, 0.2487694, 2.0470762)
+
+[node name="Punto114" parent="Mates puntos" unique_id=2144990808 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2941756, 0.2487694, 2.0470762)
+
+[node name="Punto115" parent="Mates puntos" unique_id=1363184492 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4589577, 0.2487694, 2.0470762)
+
+[node name="Punto116" parent="Mates puntos" unique_id=87349355 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.58534, 0.2487694, 2.0470762)
+
+[node name="Punto117" parent="Mates puntos" unique_id=247646339 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7458906, 0.2487694, 2.0470762)
+
+[node name="Punto118" parent="Mates puntos" unique_id=518284970 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10300517, 0.2487694, 2.0470762)
+
+[node name="Punto119" parent="Mates puntos" unique_id=1322809837 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.89243484, 0.2487694, 2.0470762)
+
+[node name="Punto120" parent="Mates puntos" unique_id=269697021 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7301633, 0.2487694, 2.0470762)
+
+[node name="Punto121" parent="Mates puntos" unique_id=32060081 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5925608, 0.2487694, 2.0470762)
+
+[node name="Punto122" parent="Mates puntos" unique_id=1925157348 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3917365, 0.2487694, 2.0470762)
+
+[node name="Punto123" parent="Mates puntos" unique_id=691988231 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.4491386, 0.2487694, 2.0470762)
+
+[node name="Punto124" parent="Mates puntos" unique_id=522176838 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.37938, 0.2487694, 2.0470762)
+
+[node name="Punto125" parent="Mates puntos" unique_id=782348658 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.2700663, 0.2487694, 2.0470762)
+
+[node name="Punto126" parent="Mates puntos" unique_id=151046598 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.3704515, 0.2487694, 2.0470762)
+
+[node name="Punto127" parent="Mates puntos" unique_id=886633964 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.2968235, 0.2487694, 1.2153919)
+
+[node name="Punto132" parent="Mates puntos" unique_id=2032917644 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.279121, 0.2487694, 1.2153919)
+
+[node name="Punto133" parent="Mates puntos" unique_id=509394175 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4040253, 0.2487694, 1.2153919)
+
+[node name="Punto134" parent="Mates puntos" unique_id=1708046370 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5791416, 0.2487694, 1.2153919)
+
+[node name="Punto138" parent="Mates puntos" unique_id=1016189742 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7903731, 0.2487694, 1.2153919)
+
+[node name="Punto139" parent="Mates puntos" unique_id=723149084 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6452813, 0.2487694, 1.2153919)
+
+[node name="Punto140" parent="Mates puntos" unique_id=1705724953 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4362397, 0.2487694, 1.2153919)
+
+[node name="Punto141" parent="Mates puntos" unique_id=596496924 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.524146, 0.2487694, 1.2153919)
+
+[node name="Punto142" parent="Mates puntos" unique_id=250548760 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.375349, 0.2487694, 1.2153919)
+
+[node name="Punto144" parent="Mates puntos" unique_id=238932410 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.388285, 0.2487694, 1.2153919)
+
+[node name="Punto145" parent="Mates puntos" unique_id=1229293824 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.3536077, 0.2487694, 0.36765027)
+
+[node name="Punto146" parent="Mates puntos" unique_id=1381926991 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.4957757, 0.2487694, 0.36765027)
+
+[node name="Punto147" parent="Mates puntos" unique_id=1326535729 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6083493, 0.2487694, 0.36765027)
+
+[node name="Punto148" parent="Mates puntos" unique_id=483650230 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8060594, 0.2487694, 0.36765027)
+
+[node name="Punto149" parent="Mates puntos" unique_id=1829298843 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9957223, 0.2487694, 0.36765027)
+
+[node name="Punto150" parent="Mates puntos" unique_id=1614161120 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2155366, 0.2487694, 0.36765027)
+
+[node name="Punto151" parent="Mates puntos" unique_id=1553965251 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4038343, 0.2487694, 0.36765027)
+
+[node name="Punto152" parent="Mates puntos" unique_id=1832623727 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5567441, 0.2487694, 0.36765027)
+
+[node name="Punto153" parent="Mates puntos" unique_id=346157266 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.70187163, 0.2487694, 0.36765027)
+
+[node name="Punto154" parent="Mates puntos" unique_id=1377634978 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.21753812, 0.2487694, 0.36765027)
+
+[node name="Punto155" parent="Mates puntos" unique_id=1885361379 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9290626, 0.2487694, 0.36765027)
+
+[node name="Punto156" parent="Mates puntos" unique_id=281130999 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8060094, 0.2487694, 0.36765027)
+
+[node name="Punto157" parent="Mates puntos" unique_id=1896293949 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6423209, 0.2487694, 0.36765027)
+
+[node name="Punto159" parent="Mates puntos" unique_id=1706958955 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.516938, 0.2487694, 0.36765027)
+
+[node name="Punto160" parent="Mates puntos" unique_id=127314128 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.464365, 0.2487694, 0.36765027)
+
+[node name="Punto162" parent="Mates puntos" unique_id=1807993949 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.3955097, 0.2487694, 0.36765027)
+
+[node name="Punto163" parent="Mates puntos" unique_id=993125503 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.3507614, 0.2487694, -0.51750445)
+
+[node name="Punto164" parent="Mates puntos" unique_id=2096209946 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.465846, 0.2487694, -0.51750445)
+
+[node name="Punto165" parent="Mates puntos" unique_id=1565009374 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.609853, 0.2487694, -0.51750445)
+
+[node name="Punto166" parent="Mates puntos" unique_id=1685831346 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.778766, 0.2487694, -0.51750445)
+
+[node name="Punto167" parent="Mates puntos" unique_id=339932127 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9742417, 0.2487694, -0.51750445)
+
+[node name="Punto168" parent="Mates puntos" unique_id=172561151 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1812463, 0.2487694, -0.51750445)
+
+[node name="Punto169" parent="Mates puntos" unique_id=1333163939 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3327312, 0.2487694, -0.51750445)
+
+[node name="Punto170" parent="Mates puntos" unique_id=1638424401 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4640784, 0.2487694, -0.51750445)
+
+[node name="Punto171" parent="Mates puntos" unique_id=2039621027 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5687046, 0.2487694, -0.51750445)
+
+[node name="Punto172" parent="Mates puntos" unique_id=599502479 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3443544, 0.2487694, -0.51750445)
+
+[node name="Punto173" parent="Mates puntos" unique_id=777098636 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0864925, 0.2487694, -0.51750445)
+
+[node name="Punto174" parent="Mates puntos" unique_id=1211883201 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8780314, 0.2487694, -0.51750445)
+
+[node name="Punto175" parent="Mates puntos" unique_id=471391996 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7018077, 0.2487694, -0.51750445)
+
+[node name="Punto177" parent="Mates puntos" unique_id=63771151 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.502857, 0.2487694, -0.51750445)
+
+[node name="Punto178" parent="Mates puntos" unique_id=1977283276 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.47959, 0.2487694, -0.51750445)
+
+[node name="Punto179" parent="Mates puntos" unique_id=216703064 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.4719744, 0.2487694, -0.51750445)
+
+[node name="Punto180" parent="Mates puntos" unique_id=528041641 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.438027, 0.2487694, -0.51750445)
+
+[node name="Punto181" parent="Mates puntos" unique_id=183616039 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.378346, 0.2487694, -1.4034324)
+
+[node name="Punto185" parent="Mates puntos" unique_id=1386559664 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9816933, 0.27606058, -1.3882058)
+
+[node name="Punto186" parent="Mates puntos" unique_id=296301941 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1643233, 0.27606058, -1.3882058)
+
+[node name="Punto187" parent="Mates puntos" unique_id=375814470 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3085866, 0.27606058, -1.3882058)
+
+[node name="Punto188" parent="Mates puntos" unique_id=159693057 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4181428, 0.27606058, -1.3882058)
+
+[node name="Punto189" parent="Mates puntos" unique_id=545782970 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5907972, 0.27606058, -1.3882058)
+
+[node name="Punto190" parent="Mates puntos" unique_id=792353087 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.31984365, 0.27606058, -1.3882058)
+
+[node name="Punto191" parent="Mates puntos" unique_id=1389683269 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0736808, 0.27606058, -1.3882058)
+
+[node name="Punto192" parent="Mates puntos" unique_id=1268510547 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8539624, 0.27606058, -1.3882058)
+
+[node name="Punto193" parent="Mates puntos" unique_id=44729184 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7069814, 0.27606058, -1.3882058)
+
+[node name="Punto196" parent="Mates puntos" unique_id=1345727152 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.470996, 0.27606058, -1.3882058)
+
+[node name="Punto197" parent="Mates puntos" unique_id=769540739 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.3542547, 0.27606058, -1.3882058)
+
+[node name="Punto198" parent="Mates puntos" unique_id=1170591362 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.3638954, 0.27606058, -1.3882058)
+
+[node name="Punto199" parent="Mates puntos" unique_id=1535242683 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.3323436, 0.27606058, -2.3358295)
+
+[node name="Punto200" parent="Mates puntos" unique_id=460361635 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.4900365, 0.27606058, -2.3358295)
+
+[node name="Punto201" parent="Mates puntos" unique_id=535387374 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.656441, 0.27606058, -2.3358295)
+
+[node name="Punto202" parent="Mates puntos" unique_id=1614788499 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.780973, 0.27606058, -2.3358295)
+
+[node name="Punto203" parent="Mates puntos" unique_id=595378652 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9674811, 0.27606058, -2.3358295)
+
+[node name="Punto204" parent="Mates puntos" unique_id=862631782 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1849022, 0.27606058, -2.3358295)
+
+[node name="Punto205" parent="Mates puntos" unique_id=1122324747 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2772017, 0.27606058, -2.175584)
+
+[node name="Punto206" parent="Mates puntos" unique_id=433313646 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.415786, 0.27606058, -2.1607714)
+
+[node name="Punto207" parent="Mates puntos" unique_id=847805982 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6397736, 0.27606058, -2.3358295)
+
+[node name="Punto208" parent="Mates puntos" unique_id=1470234031 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3282826, 0.27606058, -2.3358295)
+
+[node name="Punto209" parent="Mates puntos" unique_id=1080964994 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0805154, 0.27606058, -2.3358295)
+
+[node name="Punto210" parent="Mates puntos" unique_id=503453718 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8784157, 0.27606058, -2.3358295)
+
+[node name="Punto211" parent="Mates puntos" unique_id=294305822 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7214227, 0.27606058, -2.3358295)
+
+[node name="Punto212" parent="Mates puntos" unique_id=687116590 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5324655, 0.27606058, -2.3358295)
+
+[node name="Punto213" parent="Mates puntos" unique_id=1417377225 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.537881, 0.27606058, -2.3358295)
+
+[node name="Punto214" parent="Mates puntos" unique_id=1189507050 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.466045, 0.27606058, -2.3358295)
+
+[node name="Punto215" parent="Mates puntos" unique_id=1962970184 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.43562, 0.27606058, -2.3358295)
+
+[node name="Punto216" parent="Mates puntos" unique_id=1144551401 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.3099174, 0.27606058, -2.3358295)
+
+[node name="Punto217" parent="Mates puntos" unique_id=1661305678 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.3219533, 0.27606058, -3.1945193)
+
+[node name="Punto218" parent="Mates puntos" unique_id=278823893 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.480778, 0.27606058, -3.1945193)
+
+[node name="Punto219" parent="Mates puntos" unique_id=1000593107 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6115565, 0.27606058, -3.1945193)
+
+[node name="Punto220" parent="Mates puntos" unique_id=63588243 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7423606, 0.27606058, -3.1945193)
+
+[node name="Punto221" parent="Mates puntos" unique_id=125527736 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.901156, 0.27606058, -3.1945193)
+
+[node name="Punto222" parent="Mates puntos" unique_id=2128053737 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1441174, 0.27606058, -3.1945193)
+
+[node name="Punto224" parent="Mates puntos" unique_id=874888702 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4416127, 0.27606058, -3.1945193)
+
+[node name="Punto225" parent="Mates puntos" unique_id=2084440138 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6272383, 0.27606058, -3.1945193)
+
+[node name="Punto226" parent="Mates puntos" unique_id=118074253 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3012724, 0.27606058, -3.1945193)
+
+[node name="Punto234" parent="Mates puntos" unique_id=671095448 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.3437705, 0.27606058, -3.1945193)
+
+[node name="Punto235" parent="Mates puntos" unique_id=1591440580 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.3433595, 0.27606058, -4.10182)
+
+[node name="Punto236" parent="Mates puntos" unique_id=903204930 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.416682, 0.27606058, -4.10182)
+
+[node name="Punto237" parent="Mates puntos" unique_id=499663307 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.548187, 0.27606058, -4.10182)
+
+[node name="Punto238" parent="Mates puntos" unique_id=1838285040 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7037234, 0.27606058, -4.10182)
+
+[node name="Punto239" parent="Mates puntos" unique_id=1028552834 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8415227, 0.27606058, -4.10182)
+
+[node name="Punto240" parent="Mates puntos" unique_id=1914128493 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0650034, 0.27606058, -4.10182)
+
+[node name="Punto242" parent="Mates puntos" unique_id=1573673550 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3724537, 0.27606058, -4.10182)
+
+[node name="Punto243" parent="Mates puntos" unique_id=1324448479 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5389106, 0.27606058, -4.10182)
+
+[node name="Punto244" parent="Mates puntos" unique_id=1875319627 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.35196495, 0.27606058, -4.10182)
+
+[node name="Punto245" parent="Mates puntos" unique_id=1977641458 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1418629, 0.27606058, -4.10182)
+
+[node name="Punto246" parent="Mates puntos" unique_id=2033226125 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9250783, 0.27606058, -4.10182)
+
+[node name="Punto247" parent="Mates puntos" unique_id=1428150502 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.800764, 0.27606058, -4.10182)
+
+[node name="Punto248" parent="Mates puntos" unique_id=842154806 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.710304, 0.27606058, -4.10182)
+
+[node name="Punto249" parent="Mates puntos" unique_id=226887457 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6148396, 0.27606058, -4.10182)
+
+[node name="Punto250" parent="Mates puntos" unique_id=1310786133 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5599527, 0.27606058, -4.10182)
+
+[node name="Punto251" parent="Mates puntos" unique_id=1148471772 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.476224, 0.27606058, -4.10182)
+
+[node name="Punto252" parent="Mates puntos" unique_id=1635659588 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.379017, 0.27606058, -4.10182)
+
+[node name="Punto253" parent="Mates puntos" unique_id=584975304 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.3326893, 0.27606058, -5.008948)
+
+[node name="Punto254" parent="Mates puntos" unique_id=1336517109 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.4559507, 0.27606058, -5.008948)
+
+[node name="Punto257" parent="Mates puntos" unique_id=1699924782 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5096226, 0.2879699, -5.008948)
+
+[node name="Punto258" parent="Mates puntos" unique_id=1607321156 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.4771643, 0.27606058, -5.008948)
+
+[node name="Punto260" parent="Mates puntos" unique_id=775287623 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.7567701, 0.27606058, -5.008948)
+
+[node name="Punto261" parent="Mates puntos" unique_id=1799096321 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8188553, 0.27606058, -5.008948)
+
+[node name="Punto262" parent="Mates puntos" unique_id=945892137 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0069427, 0.27606058, -5.008948)
+
+[node name="Punto263" parent="Mates puntos" unique_id=1593070153 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2006254, 0.27606058, -5.008948)
+
+[node name="Punto264" parent="Mates puntos" unique_id=1552314038 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.43190742, 0.27606058, -5.008948)
+
+[node name="Punto265" parent="Mates puntos" unique_id=893490820 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4016862, 0.27606058, -5.008948)
+
+[node name="Punto266" parent="Mates puntos" unique_id=1396326303 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3716793, 0.27606058, -5.008948)
+
+[node name="Punto268" parent="Mates puntos" unique_id=922599138 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9703693, 0.27606058, -5.008948)
+
+[node name="Punto269" parent="Mates puntos" unique_id=1256899104 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8090086, 0.27606058, -5.008948)
+
+[node name="Punto270" parent="Mates puntos" unique_id=1974418351 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.679369, 0.27606058, -5.008948)
+
+[node name="Punto271" parent="Mates puntos" unique_id=1021811093 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.345926, 0.27606058, -5.8623066)
+
+[node name="Punto272" parent="Mates puntos" unique_id=1803192003 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3247118, 0.27606058, -5.8623066)
+
+[node name="Punto273" parent="Mates puntos" unique_id=85153107 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9093184, 0.27606058, -5.8623066)
+
+[node name="Punto274" parent="Mates puntos" unique_id=636401668 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6959925, 0.27606058, -5.8623066)
+
+[node name="Punto275" parent="Mates puntos" unique_id=60555816 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.077086, 0.27606058, -5.8623066)
+
+[node name="Punto277" parent="Mates puntos" unique_id=1292874044 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2652721, 0.27606058, -5.8623066)
+
+[node name="Punto278" parent="Mates puntos" unique_id=1562931592 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2404289, 0.27606058, -5.8623066)
+
+[node name="Punto279" parent="Mates puntos" unique_id=1420333367 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8563142, 0.27606058, -5.8623066)
+
+[node name="Punto285" parent="Mates puntos" unique_id=1599116843 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4592414, 0.27606058, -5.8623066)
+
+[node name="Punto287" parent="Mates puntos" unique_id=450697438 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.600018, 0.27606058, -5.8525515)
+
+[node name="Punto288" parent="Mates puntos" unique_id=1243097344 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.4996767, 0.27606058, -5.8525515)
+
+[node name="Punto290" parent="Mates puntos" unique_id=565873148 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.4566984, 0.27606058, -6.679997)
+
+[node name="Punto291" parent="Mates puntos" unique_id=620510791 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.526747, 0.27606058, -6.679997)
+
+[node name="Punto292" parent="Mates puntos" unique_id=791995742 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.641119, 0.27606058, -6.679997)
+
+[node name="Punto293" parent="Mates puntos" unique_id=1696986991 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7181172, 0.27606058, -6.679997)
+
+[node name="Punto294" parent="Mates puntos" unique_id=733243851 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8740754, 0.27606058, -6.679997)
+
+[node name="Punto295" parent="Mates puntos" unique_id=639257477 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0353122, 0.27606058, -6.679997)
+
+[node name="Punto296" parent="Mates puntos" unique_id=633035077 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2515626, 0.27606058, -6.679997)
+
+[node name="Punto297" parent="Mates puntos" unique_id=537410008 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3586204, 0.27606058, -6.679997)
+
+[node name="Punto298" parent="Mates puntos" unique_id=1091780988 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4823228, 0.27606058, -6.679997)
+
+[node name="Punto299" parent="Mates puntos" unique_id=564859625 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2339591, 0.27606058, -6.679997)
+
+[node name="Punto300" parent="Mates puntos" unique_id=1929502185 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0272598, 0.27606058, -6.679997)
+
+[node name="Punto301" parent="Mates puntos" unique_id=1961355400 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8405373, 0.27606058, -6.679997)
+
+[node name="Punto305" parent="Mates puntos" unique_id=27858148 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.523276, 0.27606058, -6.679997)
+
+[node name="Punto307" parent="Mates puntos" unique_id=255119485 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.4572773, 0.27606058, -7.3976994)
+
+[node name="Punto308" parent="Mates puntos" unique_id=14463 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.527288, 0.27606058, -7.3976994)
+
+[node name="Punto309" parent="Mates puntos" unique_id=303398968 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.573148, 0.27606058, -7.3976994)
+
+[node name="Punto310" parent="Mates puntos" unique_id=1529976928 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7474327, 0.27606058, -7.3976994)
+
+[node name="Punto311" parent="Mates puntos" unique_id=303219412 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.7959986, 0.27606058, -7.3976994)
+
+[node name="Punto312" parent="Mates puntos" unique_id=1265632365 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.880569, 0.27606058, -7.3976994)
+
+[node name="Punto313" parent="Mates puntos" unique_id=25940793 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1106129, 0.27606058, -7.3976994)
+
+[node name="Punto314" parent="Mates puntos" unique_id=257997142 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.6451063, 0.27606058, -7.3976994)
+
+[node name="Punto322" parent="Mates puntos" unique_id=660200738 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5734825, 0.27606058, -7.3976994)
+
+[node name="Punto323" parent="Mates puntos" unique_id=1574872094 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.399577, 0.29677, -7.3976994)
+
+[node name="Punto324" parent="Mates puntos" unique_id=23667360 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.3025036, 0.4070685, -7.3976994)
+
+[node name="Punto315" parent="Mates puntos" unique_id=2016003348 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2403563, 0.27606058, -7.3976994)
+
+[node name="Punto316" parent="Mates puntos" unique_id=288678936 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.804482, 0.27606058, -7.3976994)
+
+[node name="Punto317" parent="Mates puntos" unique_id=814945623 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9297523, 0.27606058, -7.3976994)
+
+[node name="Punto318" parent="Mates puntos" unique_id=277395046 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0719767, 0.27606058, -7.3976994)
+
+[node name="Punto319" parent="Mates puntos" unique_id=200271775 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.294871, 0.27606058, -7.3976994)
+
+[node name="Punto320" parent="Mates puntos" unique_id=1549776689 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.37472904, 0.27606058, -7.3976994)
+
+[node name="Punto321" parent="Mates puntos" unique_id=1409440721 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.44297993, 0.27606058, -7.3976994)
+
+[node name="Punto325" parent="Mates puntos" unique_id=314498856 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.44297993, 0.27606058, 7.8429947)
+
+[node name="Punto326" parent="Mates puntos" unique_id=276014826 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.49056804, 0.27606058, 7.8429947)
+
+[node name="Punto327" parent="Mates puntos" unique_id=1519881894 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4047016, 0.27606058, 7.8429947)
+
+[node name="Punto378" parent="Mates puntos" unique_id=1432032804 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4047016, 0.27606058, 9.116826)
+
+[node name="Punto379" parent="Mates puntos" unique_id=1198422573 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.47758782, 0.27606058, 9.116826)
+
+[node name="Punto328" parent="Mates puntos" unique_id=1793830499 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2514348, 0.27606058, 7.8429947)
+
+[node name="Punto329" parent="Mates puntos" unique_id=117952944 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1305356, 0.27606058, 7.8429947)
+
+[node name="Punto330" parent="Mates puntos" unique_id=120731968 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.1821933, 0.27606058, 7.8429947)
+
+[node name="Punto331" parent="Mates puntos" unique_id=1334160782 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.012511, 0.27606058, 7.8429947)
+
+[node name="Punto332" parent="Mates puntos" unique_id=937665489 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8614526, 0.27606058, 7.8429947)
+
+[node name="Punto333" parent="Mates puntos" unique_id=1852284157 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.6735053, 0.27606058, 7.8429947)
+
+[node name="Punto334" parent="Mates puntos" unique_id=1958880184 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.4888606, 0.27606058, 7.8429947)
+
+[node name="Punto335" parent="Mates puntos" unique_id=1920141269 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2619615, 0.27606058, 7.8429947)
+
+[node name="Punto342" parent="Mates puntos" unique_id=2120813363 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8475817, 0.27606058, 9.157683)
+
+[node name="Punto343" parent="Mates puntos" unique_id=332462680 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8475817, 0.27606058, 9.964172)
+
+[node name="Punto344" parent="Mates puntos" unique_id=510873120 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8475817, 0.27606058, 10.914259)
+
+[node name="Punto345" parent="Mates puntos" unique_id=1653932774 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8475817, 0.27606058, 11.928396)
+
+[node name="Punto349" parent="Mates puntos" unique_id=1880494491 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0777702, 0.27606058, 9.157683)
+
+[node name="Punto350" parent="Mates puntos" unique_id=1498197578 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0777702, 0.27606058, 9.964172)
+
+[node name="Punto351" parent="Mates puntos" unique_id=703453513 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0777702, 0.27606058, 10.914259)
+
+[node name="Punto352" parent="Mates puntos" unique_id=1283391666 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0777702, 0.27606058, 11.928396)
+
+[node name="Punto353" parent="Mates puntos" unique_id=910521648 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.48030782, 0.27606058, 9.157683)
+
+[node name="Punto354" parent="Mates puntos" unique_id=143652256 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.48030782, 0.27606058, 9.964172)
+
+[node name="Punto355" parent="Mates puntos" unique_id=1297738988 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.48030782, 0.27606058, 10.914259)
+
+[node name="Punto356" parent="Mates puntos" unique_id=1761816444 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.48030782, 0.27606058, 11.928396)
+
+[node name="Punto357" parent="Mates puntos" unique_id=1633334524 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2601101, 0.27606058, 9.157683)
+
+[node name="Punto358" parent="Mates puntos" unique_id=2059468210 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2601101, 0.27606058, 9.964172)
+
+[node name="Punto359" parent="Mates puntos" unique_id=1540070523 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2601101, 0.27606058, 10.914259)
+
+[node name="Punto360" parent="Mates puntos" unique_id=1245193388 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2601101, 0.27606058, 11.928396)
+
+[node name="Punto361" parent="Mates puntos" unique_id=910246066 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0077856, 0.27606058, 11.926923)
+
+[node name="Punto362" parent="Mates puntos" unique_id=1306646856 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9657767, 0.27606058, 12.733412)
+
+[node name="Punto363" parent="Mates puntos" unique_id=36748948 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9657767, 0.27606058, 13.683498)
+
+[node name="Punto380" parent="Mates puntos" unique_id=601783908 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2614381, 0.27606058, 12.733412)
+
+[node name="Punto381" parent="Mates puntos" unique_id=1592017939 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2614381, 0.27606058, 13.683498)
+
+[node name="Punto364" parent="Mates puntos" unique_id=844957520 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9657767, 0.27606058, 14.697636)
+
+[node name="Punto365" parent="Mates puntos" unique_id=478192355 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0077856, 0.27606058, 15.539531)
+
+[node name="Punto366" parent="Mates puntos" unique_id=667171699 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0077856, 0.27606058, 16.34602)
+
+[node name="Punto418" parent="Mates puntos" unique_id=1006859398 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0071353912, 0.27606058, 14.697636)
+
+[node name="Punto419" parent="Mates puntos" unique_id=1278948565 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.049144268, 0.27606058, 15.539531)
+
+[node name="Punto420" parent="Mates puntos" unique_id=677007491 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.049144268, 0.27606058, 16.34602)
+
+[node name="Punto421" parent="Mates puntos" unique_id=301514683 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8888685, 0.27606058, 14.697636)
+
+[node name="Punto422" parent="Mates puntos" unique_id=492134674 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.84685963, 0.27606058, 15.539531)
+
+[node name="Punto423" parent="Mates puntos" unique_id=989821938 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.84685963, 0.27606058, 16.34602)
+
+[node name="Punto424" parent="Mates puntos" unique_id=441890121 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8888685, 0.27606058, 17.190836)
+
+[node name="Punto426" parent="Mates puntos" unique_id=1204600879 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.83324, 0.27606058, 15.539531)
+
+[node name="Punto429" parent="Mates puntos" unique_id=40067265 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.83324, 0.27606058, 16.34602)
+
+[node name="Punto430" parent="Mates puntos" unique_id=916467795 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.875249, 0.27606058, 17.190836)
+
+[node name="Punto431" parent="Mates puntos" unique_id=2079091145 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.875249, 0.27606058, 18.102085)
+
+[node name="Punto432" parent="Mates puntos" unique_id=706975268 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8393843, 0.27606058, 18.102085)
+
+[node name="Punto433" parent="Mates puntos" unique_id=1137040726 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8173347, 0.27606058, 18.102085)
+
+[node name="Punto434" parent="Mates puntos" unique_id=1379316918 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8173347, 0.27606058, 17.131016)
+
+[node name="Punto435" parent="Mates puntos" unique_id=227482330 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8173347, 0.27606058, 16.355558)
+
+[node name="Punto425" parent="Mates puntos" unique_id=644232349 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.84685963, 0.27606058, 18.283964)
+
+[node name="Punto427" parent="Mates puntos" unique_id=66708898 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03829646, 0.27606058, 17.217995)
+
+[node name="Punto428" parent="Mates puntos" unique_id=1790166799 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08030534, 0.27606058, 18.256254)
+
+[node name="Punto371" parent="Mates puntos" unique_id=1809033971 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.884732, 0.27606058, 16.34602)
+
+[node name="Punto372" parent="Mates puntos" unique_id=795326161 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9360826, 0.27606058, 16.34602)
+
+[node name="Punto374" parent="Mates puntos" unique_id=86377888 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9360826, 0.27606058, 17.205976)
+
+[node name="Punto375" parent="Mates puntos" unique_id=759363139 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9360826, 0.27606058, 18.06295)
+
+[node name="Punto376" parent="Mates puntos" unique_id=2121265539 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9853823, 0.27606058, 17.205976)
+
+[node name="Punto377" parent="Mates puntos" unique_id=683095127 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9853823, 0.27606058, 18.06295)
+
+[node name="Punto373" parent="Mates puntos" unique_id=843124598 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.001828, 0.27606058, 16.34602)
+
+[node name="Punto367" parent="Mates puntos" unique_id=2100723008 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0077856, 0.27606058, 17.296106)
+
+[node name="Punto368" parent="Mates puntos" unique_id=296058633 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0077856, 0.27606058, 18.278118)
+
+[node name="Punto369" parent="Mates puntos" unique_id=2129344777 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0077856, 0.27606058, 19.545666)
+
+[node name="Punto370" parent="Mates puntos" unique_id=202593639 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0077856, 0.27606058, 20.464212)
+
+[node name="Punto382" parent="Mates puntos" unique_id=692781073 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9799507, 0.27606058, 19.545666)
+
+[node name="Punto383" parent="Mates puntos" unique_id=1089675204 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9799507, 0.27606058, 20.464212)
+
+[node name="Punto384" parent="Mates puntos" unique_id=92947697 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9916813, 0.27606058, 19.545666)
+
+[node name="Punto385" parent="Mates puntos" unique_id=58108479 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9916813, 0.27606058, 20.464212)
+
+[node name="Punto388" parent="Mates puntos" unique_id=1835734011 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9799507, 0.27606058, 21.37409)
+
+[node name="Punto389" parent="Mates puntos" unique_id=1703396379 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9916813, 0.27606058, 21.37409)
+
+[node name="Punto390" parent="Mates puntos" unique_id=687076800 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9799507, 0.27606058, 22.199572)
+
+[node name="Punto394" parent="Mates puntos" unique_id=1453106867 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.96385, 0.27606058, 22.199572)
+
+[node name="Punto391" parent="Mates puntos" unique_id=1643190193 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9916813, 0.27606058, 22.199572)
+
+[node name="Punto392" parent="Mates puntos" unique_id=122232562 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9346998, 0.27606058, 22.199572)
+
+[node name="Punto393" parent="Mates puntos" unique_id=1694443313 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9346998, 0.27606058, 23.766949)
+
+[node name="Punto386" parent="Mates puntos" unique_id=1776926701 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9472, 0.27606058, 19.545666)
+
+[node name="Punto387" parent="Mates puntos" unique_id=2025890822 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9472, 0.27606058, 20.464212)
+
+[node name="Punto346" parent="Mates puntos" unique_id=883127742 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8475817, 0.27606058, 12.865018)
+
+[node name="Punto395" parent="Mates puntos" unique_id=2029595498 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9900477, 0.27606058, 19.545666)
+
+[node name="Punto396" parent="Mates puntos" unique_id=623567387 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9900477, 0.27606058, 20.464212)
+
+[node name="Punto397" parent="Mates puntos" unique_id=1172273450 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0178826, 0.27606058, 19.545666)
+
+[node name="Punto398" parent="Mates puntos" unique_id=1832153451 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0178826, 0.27606058, 20.464212)
+
+[node name="Punto399" parent="Mates puntos" unique_id=1469155002 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.006152, 0.27606058, 19.545666)
+
+[node name="Punto400" parent="Mates puntos" unique_id=1088452787 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.006152, 0.27606058, 20.464212)
+
+[node name="Punto401" parent="Mates puntos" unique_id=899953475 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0178826, 0.27606058, 21.37409)
+
+[node name="Punto402" parent="Mates puntos" unique_id=1033759427 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.006152, 0.27606058, 21.37409)
+
+[node name="Punto403" parent="Mates puntos" unique_id=240063721 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0178826, 0.27606058, 22.199572)
+
+[node name="Punto416" parent="Mates puntos" unique_id=1222197141 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0178826, 0.27606058, 23.128603)
+
+[node name="Punto417" parent="Mates puntos" unique_id=2071623489 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.0347166, 0.27606058, 23.128603)
+
+[node name="Punto404" parent="Mates puntos" unique_id=954165414 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.033983, 0.27606058, 22.199572)
+
+[node name="Punto405" parent="Mates puntos" unique_id=600484049 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.006152, 0.27606058, 22.199572)
+
+[node name="Punto406" parent="Mates puntos" unique_id=809914765 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0631335, 0.27606058, 22.199572)
+
+[node name="Punto407" parent="Mates puntos" unique_id=1276067771 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0631335, 0.27606058, 23.766949)
+
+[node name="Punto411" parent="Mates puntos" unique_id=1473318503 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4393158, 0.27606058, 23.766949)
+
+[node name="Punto412" parent="Mates puntos" unique_id=2013972150 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1946697, 0.27606058, 23.766949)
+
+[node name="Punto413" parent="Mates puntos" unique_id=1504836487 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.058558, 0.27606058, 23.003458)
+
+[node name="Punto414" parent="Mates puntos" unique_id=466940936 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0558939, 0.27606058, 23.003458)
+
+[node name="Punto415" parent="Mates puntos" unique_id=1592824502 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0558939, 0.27606058, 23.712881)
+
+[node name="Punto408" parent="Mates puntos" unique_id=410612235 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0506332, 0.27606058, 19.545666)
+
+[node name="Punto409" parent="Mates puntos" unique_id=414405300 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0506332, 0.27606058, 20.464212)
+
+[node name="Punto347" parent="Mates puntos" unique_id=431305053 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8475817, 0.27606058, 13.888965)
+
+[node name="Punto348" parent="Mates puntos" unique_id=891704641 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8475817, 0.27606058, 14.785669)
+
+[node name="Punto336" parent="Mates puntos" unique_id=875789671 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1301756, 0.27606058, 7.8429947)
+
+[node name="Punto337" parent="Mates puntos" unique_id=1916043277 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1281161, 0.27606058, 7.8429947)
+
+[node name="Punto338" parent="Mates puntos" unique_id=1776142217 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.260411, 0.27606058, 7.8429947)
+
+[node name="Punto339" parent="Mates puntos" unique_id=603321141 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.1134553, 0.27606058, 7.8429947)
+
+[node name="Punto340" parent="Mates puntos" unique_id=1250810376 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.259402, 0.27606058, 7.8429947)
+
+[node name="Punto341" parent="Mates puntos" unique_id=1914633613 instance=ExtResource("2_yrt48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.3722634, 0.27606058, 7.8429947)
+
+[node name="Don Satur" type="Node3D" parent="." unique_id=831416379]
+
+[node name="Don Satur" parent="Don Satur" unique_id=1179469339 instance=ExtResource("3_aj8na")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 7.40446, 0.29310894, -6.7016535)
+
+[node name="Don Satur2" parent="Don Satur" unique_id=852055537 instance=ExtResource("3_aj8na")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 7.262988, 0.36366892, 6.3288074)
+
+[node name="Don Satur3" parent="Don Satur" unique_id=690220439 instance=ExtResource("3_aj8na")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -7.2299366, 0.41197395, 6.24076)
+
+[node name="Don Satur4" parent="Don Satur" unique_id=316310356 instance=ExtResource("3_aj8na")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -7.4239554, 0.30843496, -6.680262)
+
+[node name="Don Satur5" parent="Don Satur" unique_id=348901494 instance=ExtResource("3_aj8na")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -1.1407362, 0.30843496, 13.90852)
+
+[node name="Don Satur6" parent="Don Satur" unique_id=1920344546 instance=ExtResource("3_aj8na")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0.97507906, 0.30843496, 10.324599)
+
+[node name="Don Satur7" parent="Don Satur" unique_id=1588150124 instance=ExtResource("3_aj8na")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 3.7683964, 0.30843496, 15.755198)
+
+[node name="Don Satur8" parent="Don Satur" unique_id=304741846 instance=ExtResource("3_aj8na")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 3.2585526, 0.30843496, 23.420616)
+
+[node name="Don Satur9" parent="Don Satur" unique_id=326253665 instance=ExtResource("3_aj8na")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -4.0054035, 0.30843496, 23.83839)
+
+[node name="Don Satur10" parent="Don Satur" unique_id=847951951 instance=ExtResource("3_aj8na")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -3.8191593, 0.30843496, 15.754171)
+
+[node name="Enemigos" type="Node3D" parent="." unique_id=1979356860]
+
+[node name="Enemigo" parent="Enemigos" unique_id=382567089 instance=ExtResource("4_nhvok")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8983765, 0.83416915, 5.940298)
+
+[node name="Enemigo2" parent="Enemigos" unique_id=979370816 instance=ExtResource("4_nhvok")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.0736794, 0.9245211, 2.7268608)
+
+[node name="Enemigo3" parent="Enemigos" unique_id=250740902 instance=ExtResource("4_nhvok")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3632061, 0.94350576, -4.776319)
+
+[node name="Enemigo4" parent="Enemigos" unique_id=717346461 instance=ExtResource("4_nhvok")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.679534, 1.0188551, -2.5500536)
+
+[node name="Enemigo6" parent="Enemigos" unique_id=673806425 instance=ExtResource("4_nhvok")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.16670847, 1.0188551, 23.478737)
+
+[node name="Interfaz" type="CanvasLayer" parent="." unique_id=679866615]
+script = ExtResource("9_qsdrw")
+
+[node name="Barra Palida" type="ProgressBar" parent="Interfaz" unique_id=1298274946]
+anchors_preset = -1
+anchor_bottom = 0.008
+offset_left = 467.0
+offset_top = 9.0
+offset_right = 642.0
+offset_bottom = 43.816
+script = ExtResource("6_xdqvp")
+
+[node name="Contador Mates" type="Label" parent="Interfaz/Barra Palida" unique_id=199437787]
+layout_mode = 0
+offset_left = 383.0
+offset_top = -2.0
+offset_right = 519.0
+offset_bottom = 33.0
+text = "Mates: 0"
+
+[node name="Menu Derrota" type="ColorRect" parent="Interfaz" unique_id=1854894577]
+process_mode = 3
+visible = false
+offset_left = 314.0
+offset_top = 163.0
+offset_right = 772.0
+offset_bottom = 474.0
+color = Color(0.091559656, 0.07958209, 0.25854078, 1)
+
+[node name="Texto Titulo" type="Label" parent="Interfaz/Menu Derrota" unique_id=574291734]
+layout_mode = 0
+offset_left = 158.0
+offset_top = 65.0
+offset_right = 303.0
+offset_bottom = 98.0
+text = "¡TE DIO LA PALIDA!"
+
+[node name="Boton Salir" type="Button" parent="Interfaz/Menu Derrota" unique_id=564185494]
+layout_mode = 0
+offset_left = 179.0
+offset_top = 117.0
+offset_right = 278.0
+offset_bottom = 148.0
+text = "SALIR"
+
+[node name="Boton de Recursar" type="Button" parent="Interfaz/Menu Derrota" unique_id=592547407]
+layout_mode = 0
+offset_left = 176.0
+offset_top = 168.0
+offset_right = 275.0
+offset_bottom = 199.0
+text = "RECURSAR"
+
+[node name="AudioDerrota" type="AudioStreamPlayer" parent="Interfaz" unique_id=1158072371]
+process_mode = 3
+stream = ExtResource("11_qsdrw")
+
+[node name="Menu Victoria" type="Control" parent="Interfaz" unique_id=581702215]
+process_mode = 3
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Aprobado" type="Label" parent="Interfaz/Menu Victoria" unique_id=407015320]
+layout_mode = 0
+offset_left = 459.0
+offset_top = 151.0
+offset_right = 659.0
+offset_bottom = 269.0
+text = "            ¡APROBADO!"
+
+[node name="Siguiente nivel" type="Button" parent="Interfaz/Menu Victoria" unique_id=2134836144]
+layout_mode = 0
+offset_left = 458.0
+offset_top = 195.0
+offset_right = 657.0
+offset_bottom = 203.0
+text = "Siguiente nivel"
+
+[node name="Salir" type="Button" parent="Interfaz/Menu Victoria" unique_id=94686126]
+layout_mode = 0
+offset_left = 458.0
+offset_top = 237.0
+offset_right = 658.0
+offset_bottom = 268.0
+text = "Salir"
+
+[node name="Pausa" type="Control" parent="Interfaz" unique_id=1845027907]
+process_mode = 3
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Recreo" type="Label" parent="Interfaz/Pausa" unique_id=1833386391]
+layout_mode = 0
+offset_left = 465.0
+offset_top = 124.0
+offset_right = 660.0
+offset_bottom = 281.0
+text = "                RECREO"
+
+[node name="Regresar al juego" type="Button" parent="Interfaz/Pausa/Recreo" unique_id=1894787936]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 26.0
+offset_right = 194.0
+offset_bottom = 68.0
+text = "De Regreso a Clases"
+
+[node name="Reiniciar" type="Button" parent="Interfaz/Pausa/Recreo" unique_id=1252912670]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 73.0
+offset_right = 194.0
+offset_bottom = 114.0
+text = "Recursar"
+
+[node name="Salir" type="Button" parent="Interfaz/Pausa/Recreo" unique_id=1217895689]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 120.0
+offset_right = 193.0
+offset_bottom = 159.0
+text = "Salir"
+
+[node name="Mini Mapa" type="SubViewportContainer" parent="Interfaz" unique_id=950351981]
+offset_left = 7.0
+offset_top = 5.0
+offset_right = 207.0
+offset_bottom = 205.0
+
+[node name="SubViewport" type="SubViewport" parent="Interfaz/Mini Mapa" unique_id=136927182]
+handle_input_locally = false
+size = Vector2i(200, 200)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="Interfaz/Mini Mapa/SubViewport" unique_id=410852748]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 5.3531275, 0)
+fov = 69.65112
+script = ExtResource("9_a8exk")
+
+[node name="Pasillo" type="MeshInstance3D" parent="." unique_id=1680513591]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0.07970834, 0.09126353, 11.856204)
+mesh = SubResource("PlaneMesh_ptj5d")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pasillo" unique_id=1242391951]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1010952)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pasillo/StaticBody3D" unique_id=1497287896]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0.0063170586, -0.00039273128, 0.12663865)
+shape = SubResource("BoxShape3D_ipna8")
+
+[node name="2do piso" type="MeshInstance3D" parent="." unique_id=1701157700]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0.07600963, 19.854416)
+mesh = SubResource("PlaneMesh_7rtvl")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="2do piso" unique_id=121923599]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="2do piso/StaticBody3D" unique_id=42887459]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -0.0024795532, 0.009179696, 0.010552406)
+shape = SubResource("BoxShape3D_8gxv6")
+
+[node name="Decoracion" type="Node3D" parent="." unique_id=272471935]
+
+[node name="Sketchfab_Scene8" parent="Decoracion" unique_id=1619099843 instance=ExtResource("12_o5xiv")]
+transform = Transform3D(-0.9931641, 0, 0.005630577, 0, 0.5168858, 0, -0.007366435, 0, -0.7591307, 0, 0.47040272, 24.190388)
+
+[node name="Sketchfab_Scene9" parent="Decoracion" unique_id=1534975523 instance=ExtResource("12_o5xiv")]
+transform = Transform3D(-0.0050727483, 0, -0.75914174, 0, 0.5168858, 0, 0.99317855, 0, -0.0038773762, 8.443833, 0.47040272, 1.431241)
+
+[node name="Sketchfab_Scene" parent="Decoracion" unique_id=96170310 instance=ExtResource("13_qsdrw")]
+transform = Transform3D(0.62229335, 0, 0, 0, 0.4476053, 0, 0, 0, 1, -2.13126, 0, 15.70686)
+
+[node name="Sketchfab_Scene2" parent="Decoracion" unique_id=1673283262 instance=ExtResource("14_l1rco")]
+transform = Transform3D(0.26938277, 0, 0, 0, 0.20823142, 0, 0, 0, 2.252989, 8.599892, 1.6455212, -6.008544)
+
+[node name="Sketchfab_Scene5" parent="Decoracion" unique_id=200798174 instance=ExtResource("14_l1rco")]
+transform = Transform3D(-0.26938236, 0, -0.003937143, 0, 0.2082314, 0, 0.00047075175, 0, -2.2529855, -8.45342, 1.6455212, -6.008544)
+
+[node name="Sketchfab_Scene6" parent="Decoracion" unique_id=1752744088 instance=ExtResource("14_l1rco")]
+transform = Transform3D(-0.26938236, 0, -0.003937143, 0, 0.2082314, 0, 0.00047075175, 0, -2.2529855, -8.45342, 1.6455212, 3.4694462)
+
+[node name="Sketchfab_Scene7" parent="Decoracion" unique_id=72622443 instance=ExtResource("14_l1rco")]
+transform = Transform3D(-0.26938236, 0, -0.003937143, 0, 0.2082314, 0, 0.00047075175, 0, -2.2529855, -4.558226, 1.6455212, 18.791498)
+
+[node name="Sketchfab_Scene3" parent="Decoracion" unique_id=463035740 instance=ExtResource("14_l1rco")]
+transform = Transform3D(0.26938277, 0, 0, 0, 0.20823142, 0, 0, 0, 2.252989, 8.599892, 1.6455212, 3.3417053)
+
+[node name="Sketchfab_Scene4" parent="Decoracion" unique_id=2135878560 instance=ExtResource("14_l1rco")]
+transform = Transform3D(0.26938277, 0, 0, 0, 0.20823142, 0, 0, 0, 2.252989, 4.4851933, 1.6455212, 18.374098)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=542162646]
+stream = ExtResource("16_l1rco")
+autoplay = true
